@@ -1,0 +1,36 @@
+h1{
+    font-weight: 700;
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+}
+.about{
+    padding: 2em;
+}
+p{
+    padding: .5em 2em;
+    font-size: 1.3em;
+}
+div img{
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+/**** MOBILE ****/
+@media only screen and (max-width: 480px) {
+    h1{
+        font-size: 2em;
+    }
+    .about{
+        padding: 1em;
+    }
+    p{
+        padding: .5em 0;
+        font-size: 1em;
+    }
+    div img{
+        display: block;
+        margin: auto;
+        width: 40%;
+    }
+}

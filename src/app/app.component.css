@@ -1,0 +1,141 @@
+/****NAV****/
+.nav{
+    padding: 1em 1.5em;
+}
+.nav ul{
+    display: inline-block;
+    width: fit-content;
+    margin: auto;
+}
+.nav ul li{
+    display: inline-block;
+    margin: 0 .5em;
+    padding: .5em 1.5em;
+    border-radius: 2em;
+    background: #CFCCEF;
+}
+.nav ul li:hover{
+    background: #fff !important;
+    cursor: pointer;
+    transition: .5s;
+}
+.menu{
+    display: none;
+}
+.logo{
+    height: 3em;
+    width: fit-content;
+    display: inline-block;
+}
+.social-networks{
+    height: 2em;
+    margin: .5em 0 .5em 1em;
+    width: fit-content;
+    float: right;
+}
+.icons-nav{
+    width: 10%;
+    padding: 0;
+    margin: 0;
+}
+.icons-sn{
+    width: 10%;
+    padding: 0;
+    margin: 0;
+}
+/**** OTHER ****/
+@media (min-width: 991.99px) and (max-width: 1199.98px) {
+    
+}
+@media (min-width: 767.99px) and (max-width: 991.98px) {
+    
+}
+@media (min-width: 575.99px) and (max-width: 767.98px) {
+    
+}
+/****NAV****/
+
+
+/****FOOTER****/
+footer{
+    background: #120B67;
+    color: white;
+    padding: 3em .5em;
+}
+footer p{
+    margin: auto 0;
+}
+/****FOOTER****/
+
+/**** MOBILE ****/
+@media only screen and (max-width: 480px) {
+    .nav ul{
+        z-index: 1;
+        padding: 6em 7em 70vh 1em;
+        position: absolute;
+        top: 0;
+        left: -1em;
+        background: #120B67;
+        border-radius: 1em;
+        transition: .5s;
+    }
+    .nav ul li{
+        margin: 0 .5em 0 0;
+        padding: .7em 1.5em .7em 0;
+        display: block;
+        color: #ffffff;
+        background: none;
+    }
+    .nav ul li:hover{
+        background: none !important;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    .nav ul li svg{
+        display: inline-block;
+        color: #d3d3d3;
+        height: 1em;
+        margin-right: 1em;
+    }
+    .nav ul li span{
+        display: inline-block;
+        content: "";
+        background: #ffffff;
+        width: .5em;
+        height: 1em;
+        margin-right: 2em;
+    }    
+    .menu{        
+        height: 1.5em;
+        display: inline-block;
+        width: fit-content;
+        margin: .8em .5em .5em 0;        
+    }
+    .logo{
+        margin: 0;
+    }
+    .icons-nav{
+        width: 60%;
+        text-align: center;
+    }
+    .icons-sn{
+        width: 20%;
+    }
+    .menu-container{
+        z-index: 5;
+        width: 20%;
+    }
+    .social-networks{
+        height: 1.6em;
+        margin: .8em 0 .5em .5em;
+    }
+    .facebook{
+        display: none;
+    }
+    footer{
+        padding: 1.5em .5em;
+    }
+    footer p{
+        font-size: .7em;
+    }
+}

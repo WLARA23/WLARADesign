@@ -1,0 +1,187 @@
+h2{
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-weight: 700;
+    font-size: 4em;
+    padding: 0;
+    margin: 0;
+}
+h3{
+    font-weight: 300;
+    font-size: 1.4em;
+    padding: 0;
+    margin: 0;
+}
+h4{
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+.header-home{
+    height: 80vh;    
+    padding: 0;
+    margin: 0;
+}
+.div-portrait{
+    position: relative;
+}
+.portrait{
+    position: absolute;
+    bottom: -80vh;
+    height: 90vh;
+    left: -9%;
+    width: auto;
+}
+.greeting{
+    margin-left: 28%;
+    margin-top: 6em;
+}
+.main-skills{
+    padding: 1em 2em;
+}
+.main-skills img{
+    float: right;
+    padding: .5em;
+}
+.recent-projects{
+    padding: 1em .5em;
+}
+.img-recent-project{
+    display: inline-block;
+    margin: 1.69em 2.5%;
+    width: 45%;
+    height: 25vh;
+    background-color: gray;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.img-recent-project{
+    cursor: pointer;
+}
+.img-recent-project img{
+    height: 100%;
+    width: auto;
+}
+.portfolio{
+    background-color: #A19CD2;
+    padding: 2em;
+}
+.portfolio h2{
+    font-weight: 700;
+}
+.card-portfolio-home{
+    display: inline-block;
+    margin: 1.69em 1.6%;
+    width: 30%;
+    height: 35vh;
+    background-color: gray;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.card-portfolio-home:hover{
+    cursor: pointer;
+}
+.img-portfolio-home{
+    height: 80%;
+    width: auto;
+    overflow: hidden;
+}
+.img-portfolio-home img{
+    height: auto;
+    width: 100%;
+}
+.info-portfolio-home{
+    padding: 0 .6em;
+    height: 20%;
+    background-color: #DDDBF4;
+}
+.info-portfolio-home h3{
+    display: inline-block;
+    margin: 0;
+    padding: .6em 0;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 1.3em;
+    color: #120B67;
+}
+.info-portfolio-home img{
+    height: 1.5em;
+    margin: 1em 0 1em .5em;
+    float: right;
+}
+
+/**** MOBILE ****/
+@media only screen and (max-width: 480px) {
+    h2{
+        font-size: 1em;
+    }
+    h1{
+        font-size: 2em;
+    }
+    h3{
+        font-size: .7em;
+    }
+    h4{
+        font-size: 1em;
+    }
+    .header-home{
+        height: 90vh;
+        padding: 0;
+        margin: 0;
+    }
+    .div-portrait{
+        position: relative;
+    }
+    .portrait{
+        bottom: -60vh;
+        height: 45vh;
+        left: -20%;
+        width: auto;
+    }
+    .greeting{
+        margin-left: 0;
+        margin-top: .5em;
+        text-align: center;
+    }
+    .main-skills{
+        padding: 10em 1em 1em;
+    }
+    .main-skills img{
+        float: right;
+        padding: .5em .2em;
+        height: 2.7em;
+    }
+    .recent-projects{
+        padding: 6.5em .5em 0;
+    }
+    .img-recent-project{
+        width: 45%;
+        height: 15vh;
+    }
+    .portfolio{
+        padding: 1em;
+    }
+    .portfolio h2{
+        padding-top: .5em;
+        font-size: 1.5em;
+    }
+    .card-portfolio-home{
+        margin: 1em 0;
+        width: 100%;
+        height: 30vh;
+    }
+    .img-portfolio-home{
+        height: 75%;
+    }
+    .info-portfolio-home{
+        height: 25%;
+    }
+    .info-portfolio-home h3{
+        padding: 1em 0;
+        font-size: 1em;
+    }
+}
