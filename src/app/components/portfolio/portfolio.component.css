@@ -5,7 +5,8 @@ h1{
     margin: 0;
 }
 .portfolio{
-    padding: 2em;
+    padding: 2em 10em;
+    min-height: 75vh;
 }
 .project-name{
     text-overflow: ellipsis;

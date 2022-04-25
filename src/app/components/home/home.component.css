@@ -23,7 +23,7 @@ h4{
 }
 .header-home{
     height: 80vh;    
-    padding: 0;
+    padding: 0 10em;
     margin: 0;
 }
 .div-portrait{
@@ -33,7 +33,7 @@ h4{
     position: absolute;
     bottom: -80vh;
     height: 90vh;
-    left: -9%;
+    left: -19%;
     width: auto;
 }
 .greeting{
@@ -69,7 +69,7 @@ h4{
 }
 .portfolio{
     background-color: #A19CD2;
-    padding: 2em;
+    padding: 2em 10em;
 }
 .portfolio h2{
     font-weight: 700;
