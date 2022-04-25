@@ -22,10 +22,10 @@
         <div class="col-sm-6"></div>
         <div class="col-sm-6">
             <h4>Recent Projects</h4>
-            <div class="img-recent-project">
+            <div class="img-recent-project" (click)="projectNumber(Projects[Projects.length-1].id)" (click)="openProjectHome()">
                 <img src="../../../assets/imgs/Error 404 Desktop not found.png" alt="Recent project 1">
             </div>
-            <div class="img-recent-project">
+            <div class="img-recent-project" (click)="projectNumber(Projects[Projects.length-2].id)" (click)="openProjectHome()">
                 <img src="../../../assets/imgs/Error 404 Desktop not found.png" alt="Recent project 2">
             </div>
         </div>
@@ -34,42 +34,22 @@
 <div class="row portfolio">
     <div class="col-12">
         <h2>Portfolio</h2>
-        <!--CARD-->
-        <div class="card-portfolio-home">
-            <div class="img-portfolio-home">
-                <img src="../../../assets/imgs/Error 404 Desktop not found.png" alt="Recent project 1">
-            </div>
-            <div class="info-portfolio-home">
-                <h3>Project Name</h3>
-                <img src="../../../assets/imgs/svg/icon_project_html.svg" alt="Skill">
-                <img src="../../../assets/imgs/svg/icon_project_css.svg" alt="Skill">
-            </div>
-        </div>
-        <!--CARD-->
-        <!--CARD-->
-        <div class="card-portfolio-home">
-            <div class="img-portfolio-home">
-                <img src="../../../assets/imgs/Error 404 Desktop not found.png" alt="Recent project 1">
-            </div>
-            <div class="info-portfolio-home">
-                <h3>Project Name</h3>
-                <img src="../../../assets/imgs/svg/icon_project_html.svg" alt="Skill">
-                <img src="../../../assets/imgs/svg/icon_project_css.svg" alt="Skill">
-            </div>
-        </div>
-        <!--CARD-->
-        <!--CARD-->
-        <div class="card-portfolio-home">
-            <div class="img-portfolio-home">
-                <img src="../../../assets/imgs/Error 404 Desktop not found.png" alt="Recent project 1">
-            </div>
-            <div class="info-portfolio-home">
-                <h3>Project Name</h3>
-                <img src="../../../assets/imgs/svg/icon_project_html.svg" alt="Skill">
-                <img src="../../../assets/imgs/svg/icon_project_css.svg" alt="Skill">
-            </div>
-        </div>
-        <!--CARD-->
+
+            <tbody *ngFor="let newProject of Projects">
+                <!--CARD-->
+                <div class="card-portfolio-home" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
+                    <div class="img-portfolio-home">
+                        <img src="../../../assets/imgs/Error 404 Desktop not found.png" alt="Recent project 1">
+                    </div>
+                    <div class="info-portfolio-home">
+                        <h3>{{newProject.project_name}} {{newProject.id}}</h3>
+                        <img src="../../../assets/imgs/svg/icon_project_html.svg" alt="Skill">
+                        <img src="../../../assets/imgs/svg/icon_project_css.svg" alt="Skill">
+                    </div>
+                </div>
+                <!--CARD-->
+            </tbody>
+        
         <div>
             <span class="btn-see-more" (click)="openPortfolioHome()">See more</span>
         </div>        

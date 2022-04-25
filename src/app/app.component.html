@@ -73,11 +73,12 @@
 <!-- NAV -->
 
 <!-- HEADER -->
-<app-home *ngIf="home" (portfolio)="openPortfolioHome($event)"></app-home>
+<app-home *ngIf="home" (portfolio)="openPortfolioHome($event)" (project)="openProjectHome($event)" (projectId)="projectNumber($event)"></app-home>
 <app-skills *ngIf="skills"></app-skills>
 <app-portfolio *ngIf="portfolio"></app-portfolio>
 <app-about *ngIf="about"></app-about>
 <app-contact *ngIf="contact"></app-contact>
+<app-project *ngIf="project" [id]="projectId"></app-project>
 <!-- HEADER -->
 
 <!-- FOOTER -->

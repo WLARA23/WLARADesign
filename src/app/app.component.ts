@@ -6,13 +6,15 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'WLARADesign';  
+  title = 'WLARADesign';
 
   home:boolean = true;
   skills:boolean = false;
   portfolio:boolean = false;
   about:boolean = false;
   contact:boolean = false;
+  project:boolean = false;
+  projectId:string = "";
 
   menu:boolean = false;
 
@@ -40,6 +42,7 @@ export class AppComponent implements OnInit {
     this.portfolio = false;
     this.about = false;
     this.contact = false;
+    this.project = false;
 
     this.menu = false;
   }
@@ -50,6 +53,7 @@ export class AppComponent implements OnInit {
     this.portfolio = false;
     this.about = false;
     this.contact = false;
+    this.project = false;
 
     this.menu = false;
   }
@@ -60,6 +64,7 @@ export class AppComponent implements OnInit {
     this.portfolio = true;
     this.about = false;
     this.contact = false;
+    this.project = false;
 
     this.menu = false;
   }
@@ -77,6 +82,7 @@ export class AppComponent implements OnInit {
     this.portfolio = false;
     this.about = true;
     this.contact = false;
+    this.project = false;
 
     this.menu = false;
   }
@@ -87,7 +93,30 @@ export class AppComponent implements OnInit {
     this.portfolio = false;
     this.about = false;
     this.contact = true;
+    this.project = false;
 
     this.menu = false;
+  }
+
+  openProject():void {
+    this.home = false;
+    this.skills = false;
+    this.portfolio = false;
+    this.about = false;
+    this.contact = false;
+    this.project = true;
+
+    this.menu = false;
+  }
+
+  openProjectHome(bool: boolean):void {
+    if(bool){
+      this.openProject();
+      window.scroll(0, 0);
+    }    
+  }
+  projectNumber(id: string):void {
+    this.projectId = id;
+    window.scroll(0, 0); 
   }
 }
