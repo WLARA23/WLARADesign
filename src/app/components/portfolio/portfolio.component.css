@@ -5,7 +5,14 @@ h1{
     margin: 0;
 }
 .portfolio{
-    padding: 2em;
+    padding: 2em 10em;
+    min-height: 75vh;
+}
+.project-name{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 90% !important;
 }
 .card-portfolio{
     display: inline-block;
@@ -23,6 +30,8 @@ h1{
     height: 80%;
     width: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 .img-portfolio img{
     height: auto;

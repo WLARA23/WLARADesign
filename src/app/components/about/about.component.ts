@@ -1,4 +1,6 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+
+import languages from 'src/assets/json/languages.json';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +8,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+
+  languagesJSON: any = languages;
+  @Input() languagePosition = 0;
 
   screen:number = 0;
 

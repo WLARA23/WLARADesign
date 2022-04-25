@@ -1,12 +1,10 @@
 <div class="row skills">
     <div class="col-12">
-        <h1>Skills</h1>
+        <h1>{{languagesJSON[languagePosition].skills}}</h1>
     </div>
     <div class="col-sm-6">
-        <h2>Design and multimedia</h2>
-        <p>To elaborate design elements I use applications like Figma and Adobe XD to do my wireframes and mockups,
-            Inkscape to make vector elements, Photoshop and Gimp to make illustrations, and Premiere Pro to make
-            multimedia documents.</p>
+        <h2>{{languagesJSON[languagePosition].design_and_multimedia}}</h2>
+        <p>{{languagesJSON[languagePosition].design_and_multimedia_info}}</p>
             <div class="col-12 container-cards">
                 <!--SKILL-->
                 <div class="card-skill">
@@ -47,9 +45,8 @@
             </div>
     </div>
     <div class="col-sm-6">
-        <h2>Software develop</h2>
-        <p>To coding I use HTML, CSS, Bootstrap and Javascript to make frontend on my websites, PHP and Laravel to make
-            backend and GitHub to save all project documents.</p>
+        <h2>{{languagesJSON[languagePosition].software_develop}}</h2>
+        <p>{{languagesJSON[languagePosition].software_develop_info}}</p>
             <div class="col-12 container-cards">
                 <!--SKILL-->
                 <div class="card-skill">
