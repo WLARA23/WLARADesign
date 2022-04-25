@@ -19,6 +19,13 @@
     cursor: pointer;
     transition: .5s;
 }
+#language{
+    background: #120B67 !important;
+    color: #fff;
+}
+#language:hover{
+    background: #000 !important;
+}
 .menu{
     display: none;
 }

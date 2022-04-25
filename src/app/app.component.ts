@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 
+import languages from 'src/assets/json/languages.json';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,6 +9,10 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'WLARADesign';
+
+  languagesJSON: any = languages;
+  language:string = "English";
+  languagePosition:number = 0;
 
   home:boolean = true;
   skills:boolean = false;
@@ -109,12 +115,33 @@ export class AppComponent implements OnInit {
     this.menu = false;
   }
 
+  changeLanguage():void{
+    let languageElement = document.getElementById("language");
+    if(languageElement?.textContent == "Español"){
+      this.language = "English";
+      this.languagePosition = 0;
+      languageElement.innerHTML = this.language;
+    }else if(languageElement?.textContent == "English"){
+      this.language = "Español";
+      this.languagePosition = 1;
+      languageElement.innerHTML = this.language;
+    }
+  }
+
   openProjectHome(bool: boolean):void {
     if(bool){
       this.openProject();
       window.scroll(0, 0);
     }    
   }
+
+  openProjectPortfolio(bool: boolean):void {
+    if(bool){
+      this.openProject();
+      window.scroll(0, 0);
+    }    
+  }
+
   projectNumber(id: string):void {
     this.projectId = id;
     window.scroll(0, 0); 
