@@ -36,3 +36,8 @@ p{
     font-size: 1.3em;
     margin: 0;
 }
+.other-projects{
+    background-color: var(--border-blue);
+    margin-left: -15px;
+    margin-right: -15px;
+}

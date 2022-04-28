@@ -20,7 +20,7 @@ p{
 .card-skill{
     margin: 0 1em 1em 0;
     padding: .7em;
-    background-color: #ffffff;
+    background-color: var(--white);
     width: fit-content;
     display: inline-block;
     border-radius: 1em;

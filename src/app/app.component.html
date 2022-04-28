@@ -80,7 +80,7 @@
 <app-portfolio *ngIf="portfolio" (project)="openProjectPortfolio($event)" (projectId)="projectNumber($event)" [languagePosition]="languagePosition"></app-portfolio>
 <app-about *ngIf="about" [languagePosition]="languagePosition"></app-about>
 <app-contact *ngIf="contact" [languagePosition]="languagePosition"></app-contact>
-<app-project *ngIf="project" [id]="projectId" [languagePosition]="languagePosition"></app-project>
+<app-project *ngIf="project" [id]="projectId" [languagePosition]="languagePosition" (project)="openProjectHome($event)" (projectId)="projectNumber($event)" (portfolio)="openPortfolioHome($event)"></app-project>
 <!-- HEADER -->
 
 <!-- FOOTER -->

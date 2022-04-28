@@ -151,3 +151,29 @@
     </div>
 </div>
 <!-- WHAT DID I LEARN? -->
+
+<div class="row project other-projects">
+    <div class="col-12">
+        <h2>{{languagesJSON[languagePosition].other_projects}}</h2>   
+            <!--CARD-->
+            <div *ngFor="let newProject of Projects" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
+                <div class="project-card-img">
+                    <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
+                </div>
+                <div class="project-card-info">
+                    <div class="row">
+                        <div class="col-9">
+                            <h3 class="project-name">{{newProject.project_name}}</h3>
+                        </div>
+                        <div class="col-3">
+                            <p class="project-date">{{newProject.date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--CARD-->
+            <div>
+                <span class="btn-see-more" (click)="openPortfolioHome()">{{languagesJSON[languagePosition].see_more}}</span>
+            </div>  
+    </div>    
+</div>

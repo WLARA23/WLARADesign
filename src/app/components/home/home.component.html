@@ -35,11 +35,11 @@
     <div class="col-12">
         <h2>{{languagesJSON[languagePosition].portfolio}}</h2>
             <!--CARD-->
-            <div *ngFor="let newProject of Projects" class="card-portfolio-home" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
-                <div class="img-portfolio-home">
+            <div *ngFor="let newProject of Projects" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
+                <div class="project-card-img">
                     <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
                 </div>
-                <div class="info-portfolio-home">
+                <div class="project-card-info">
                     <div class="row">
                         <div class="col-9">
                             <h3 class="project-name">{{newProject.project_name}}</h3>

@@ -12,19 +12,19 @@
     margin: 0 .5em;
     padding: .5em 1.5em;
     border-radius: 2em;
-    background: #CFCCEF;
+    background: var(--light-blue);
 }
 .nav ul li:hover{
-    background: #fff !important;
+    background: var(--white) !important;
     cursor: pointer;
     transition: .5s;
 }
 #language{
-    background: #120B67 !important;
-    color: #fff;
+    background: var(--base-blue) !important;
+    color: var(--white);
 }
 #language:hover{
-    background: #000 !important;
+    background: var(--black) !important;
 }
 .menu{
     display: none;
@@ -65,8 +65,8 @@
 
 /****FOOTER****/
 footer{
-    background: #120B67;
-    color: white;
+    background: var(--base-blue);
+    color: var(--white);
     padding: 3em .5em;
 }
 footer p{
@@ -82,7 +82,7 @@ footer p{
         position: absolute;
         top: 0;
         left: -1em;
-        background: #120B67;
+        background: var(--base-blue);
         border-radius: 1em;
         transition: .5s;
     }
@@ -90,24 +90,24 @@ footer p{
         margin: 0 .5em 0 0;
         padding: .7em 1.5em .7em 0;
         display: block;
-        color: #ffffff;
+        color: var(--white);
         background: none;
     }
     .nav ul li:hover{
         background: none !important;
         font-weight: 700;
-        color: #ffffff;
+        color: var(--white);
     }
     .nav ul li svg{
         display: inline-block;
-        color: #d3d3d3;
+        color: var(--light-gray);
         height: 1em;
         margin-right: 1em;
     }
     .nav ul li span{
         display: inline-block;
         content: "";
-        background: #ffffff;
+        background: var(--white);
         width: .5em;
         height: 1em;
         margin-right: 2em;

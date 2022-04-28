@@ -1,16 +1,27 @@
+:root{
+    --black: #000000;
+    --white: #ffffff;
+    --input-blue: #DDDBF4;
+    --light-blue: #CFCCEF;
+    --border-blue: #A19CD2;
+    --base-blue: #120B67;
+    --gold: #D7C34C;
+    --light-gold: #F0D84A;
+    --light-gray: #d3d3d3;
+}
 body{
-    background-color: #CFCCEF;
+    background-color: var(--light-blue);
     font-family: 'Roboto';
     font-weight: 300;
     color: black;
 }
 
 ::-webkit-scrollbar{
-    background: #CFCCEF;
+    background: var(--light-blue);
     width: .5em;
 }
 ::-webkit-scrollbar-thumb{
-    background: #120B67;
+    background: var(--base-blue);
 }
 
 /**** CLASSES ****/
@@ -25,15 +36,69 @@ body{
     width: fit-content;
     margin: auto;
     display: block;
-    background-color: #D7C34C;
+    background-color: var(--gold);
     padding: .5em 10em;
     font-size: 1.5em;
     border-radius: .7em;
 }
 .btn-see-more:hover{
     cursor: pointer;
-    background-color: #F0D84A;
+    background-color: var(--light-gold);
 }
+
+/* PROJECT CARD */
+.project-card{
+    display: inline-block;
+    margin: 1.69em 1.6%;
+    width: 30%;
+    height: auto;
+    background-color: gray;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.project-name{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 90% !important;
+}
+.project-date{
+    font-size: 1.2em;
+    padding: .6em;
+    margin: 0;
+}
+.project-card:hover{
+    cursor: pointer;
+}
+.project-card-img{
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.project-card-img img{
+    height: auto;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+.project-card-info{
+    padding: 0 .6em;
+    height: auto;
+    background-color: var(--input-blue);
+}
+.project-card-info h3{
+    display: inline-block;
+    margin: 0 !important;
+    padding: .6em 0 !important;
+    width: fit-content;
+    font-weight: 400 !important;
+    font-size: 1.3em;
+    color: var(--base-blue);
+}
+/* PROJECT CARD */
+
 @media only screen and (max-width: 480px) {
     .btn-see-more{
         padding: .5em 2em;

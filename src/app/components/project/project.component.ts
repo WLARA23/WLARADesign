@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Input} from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output} from '@angular/core';
 
 import doneProject from 'src/assets/json/projects.json';
 import languages from 'src/assets/json/languages.json';
@@ -18,8 +18,24 @@ export class ProjectComponent implements OnInit {
 
   Projects: any = doneProject;
 
+  @Output() portfolio = new EventEmitter<boolean>()
+  @Output() project = new EventEmitter<boolean>()
+  @Output() projectId = new EventEmitter<string>()
+
   ngOnInit(): void {   
 
+  }
+
+  openProjectHome():void{
+    this.project.emit(true);
+  }
+
+  projectNumber(id: string):void{
+    this.projectId.emit(id);
+  }
+
+  openPortfolioHome():void{
+    this.portfolio.emit(true);
   }
 
 }
