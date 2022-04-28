@@ -11,8 +11,8 @@ export class AppComponent implements OnInit {
   title = 'WLARADesign';
 
   languagesJSON: any = languages;
-  language:string = "English";
-  languagePosition:number = 0;
+  language:string = "Español";
+  languagePosition:number = 1;
 
   home:boolean = true;
   skills:boolean = false;

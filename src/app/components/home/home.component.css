@@ -51,14 +51,15 @@ h4{
     padding: 1em .5em;
 }
 .img-recent-project{
-    display: inline-block;
+    display: inline-flex;
     margin: 1.69em 2.5%;
     width: 45%;
-    height: 25vh;
+    height: 24vh;
     background-color: gray;
     border-radius: 1em;
     overflow: hidden;
-    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 .img-recent-project{
     cursor: pointer;
@@ -78,7 +79,7 @@ h4{
     display: inline-block;
     margin: 1.69em 1.6%;
     width: 30%;
-    height: 35vh;
+    height: auto;
     background-color: gray;
     border-radius: 1em;
     overflow: hidden;
@@ -89,11 +90,16 @@ h4{
     overflow: hidden;
     width: 90% !important;
 }
+.project-date{
+    font-size: 1.2em;
+    padding: .6em;
+    margin: 0;
+}
 .card-portfolio-home:hover{
     cursor: pointer;
 }
 .img-portfolio-home{
-    height: 80%;
+    height: auto;
     width: auto;
     overflow: hidden;
     display: flex;
@@ -105,7 +111,7 @@ h4{
 }
 .info-portfolio-home{
     padding: 0 .6em;
-    height: 20%;
+    height: auto;
     background-color: #DDDBF4;
 }
 .info-portfolio-home h3{
