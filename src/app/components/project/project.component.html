@@ -86,11 +86,8 @@
     <div class="col">
         <h2>{{languagesJSON[languagePosition].solution}}</h2>
         <div class="row">            
-            <div class="col-6">
-                <p>{{Projects[id].solution_1}}</p>
-            </div>
-            <div class="col-6">
-                <p>{{Projects[id].solution_2}}</p>
+            <div class="col">
+                <p>{{Projects[id].solution}}</p>
             </div>
         </div>
         <div class="row">
@@ -115,11 +112,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
-                <img [src]="Projects[id].implementations_image_1" alt="">
-            </div>
-            <div class="col-6">
-                <img [src]="Projects[id].implementations_image_2" alt="">
+            <div class="col text-center">
+                <img class="w-100" [src]="Projects[id].implementations_image" alt="">
             </div>
         </div>
     </div>
@@ -131,26 +125,26 @@
     <div class="col">
         <h2>{{languagesJSON[languagePosition].what_i_learn}}</h2>
         <div class="row">
-            <div class="col-6">
+            <div class="col-4 text-right font-weight-bold">
                 <p>{{Projects[id].learning_1}}</p>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <p>{{Projects[id].learning_1_description}}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-4 text-right font-weight-bold">
                 <p>{{Projects[id].learning_2}}</p>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <p>{{Projects[id].learning_2_description}}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-4 text-right font-weight-bold">
                 <p>{{Projects[id].learning_3}}</p>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <p>{{Projects[id].learning_3_description}}</p>
             </div>
         </div>
