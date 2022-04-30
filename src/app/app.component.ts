@@ -126,12 +126,20 @@ export class AppComponent implements OnInit {
 
   changeLanguage():void{
     let languageElement = document.getElementById("language");
+    let languageMobileElement = document.getElementById("languageMobile");
     if(languageElement?.textContent == "Español"){
       this.language = "English";
       languageElement.innerHTML = this.language;
     }else if(languageElement?.textContent == "English"){
       this.language = "Español";
       languageElement.innerHTML = this.language;
+    }
+    if(languageMobileElement?.textContent == "Español"){
+      this.language = "English";
+      languageMobileElement.innerHTML = this.language;
+    }else if(languageMobileElement?.textContent == "English"){
+      this.language = "Español";
+      languageMobileElement.innerHTML = this.language;
     }
     this.languageService.changeLanguage(this.language);
     this.languagesJSON$ = this.languageService.languageObservable;

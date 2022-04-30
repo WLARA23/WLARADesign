@@ -55,5 +55,8 @@ textarea:focus{
     label{
         font-size: 1em;
     }
+    .contact{
+        padding: 1em;
+    }
 
 }

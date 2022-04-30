@@ -111,9 +111,37 @@ body{
 }
 /* PROJECT CARD */
 
+/**** MOBILE ****/
 @media only screen and (max-width: 480px) {
     .btn-see-more{
         padding: .5em 2em;
+        width: 90%;
         font-size: 1em;
+    } 
+    #languageMobile{
+        margin-left: 2em;
+        margin-top: 1em;
+        padding: .5em 2em;
+        color: var(--base-blue);
+        background-color: var(--light-blue);
+        display: block;
+        font-weight: 700;
+        text-align: center;
     }
+    #languageMobile:hover{
+        font-weight: 700;
+        background-color: var(--light-blue) !important;
+    }
+    /* PROJECT CARD */
+    .project-card{
+        width: 100%;
+        margin: 1em 1.6%;
+    }
+    .project-card-info h3{
+        font-size: 1em !important;
+    }
+    .project-card-info p{
+        font-size: 1em !important;
+    }
+    /* PROJECT CARD */
 }
