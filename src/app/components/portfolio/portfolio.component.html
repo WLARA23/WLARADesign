@@ -1,18 +1,22 @@
 <div class="row portfolio">
     <div class="col-12">
-        <h1>{{languagesJSON[languagePosition].portfolio}}</h1>
+        <h1>{{(languagesJSON$ | async)?.portfolio}}</h1>
         <!--CARD-->
-        <div *ngFor="let newProject of Projects.reverse()" class="card-portfolio" (click)="projectNumber(newProject.id)" (click)="openProjectPortfolio()">
-            <div class="img-portfolio">
+        <div routerLink="/project/{{newProject.date}}/{{newProject.id}}" *ngFor="let newProject of Projects.reverse()" class="project-card" (click)="setProjectId(newProject.id)">
+            <div class="project-card-img">
                 <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
             </div>
-            <div class="info-portfolio">
-                <h3 class="project-name">{{newProject.project_name}}</h3>
-                <!--<img src="../../../assets/imgs/svg/icon_project_html.svg" alt="Skill">-->
-                <!--<img src="../../../assets/imgs/svg/icon_project_css.svg" alt="Skill">-->
+            <div class="project-card-info">
+                <div class="row">
+                    <div class="col-9">
+                        <h3 class="project-name">{{newProject.project_name}}</h3>
+                    </div>
+                    <div class="col-3">
+                        <p class="project-date">{{newProject.date}}</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--CARD-->
-        <!--<span class="btn-see-more">See more</span>-->
+        <!--CARD--> 
     </div>
 </div>

@@ -1,7 +1,9 @@
-import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 import doneProject from 'src/assets/json/projects.json';
-import languages from 'src/assets/json/languages.json';
+import { Observable } from 'rxjs';
+import { LanguageServiceService } from 'src/app/services/language-service.service';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
   selector: 'app-home',
@@ -10,30 +12,26 @@ import languages from 'src/assets/json/languages.json';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  //VARIABLES 
   Projects: any = doneProject;
 
-  @Output() portfolio = new EventEmitter<boolean>()
-  @Output() project = new EventEmitter<boolean>()
-  @Output() projectId = new EventEmitter<string>()
+  languagesJSON$: Observable<any>;
 
-  languagesJSON: any = languages;
-  @Input() languagePosition = 0;
+  //CONSTRUCTOR
+  constructor(languageService:LanguageServiceService, private projectsService:ProjectsService) { 
+    this.languagesJSON$ = languageService.languageObservable;
+  }
 
   ngOnInit(): void {
   }
 
-  openPortfolioHome():void{
-    this.portfolio.emit(true);
+  setProjectId(id:number):void{
+    this.projectsService.idObservableData = id;
+    this.scrollUp();
   }
 
-  openProjectHome():void{
-    this.project.emit(true);
-  }
-
-  projectNumber(id: string):void{
-    this.projectId.emit(id);
+  scrollUp():void{
+    window.scroll(0, 0);
   }
 
 }

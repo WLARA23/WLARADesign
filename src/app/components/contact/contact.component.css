@@ -17,35 +17,35 @@ input{
     padding: .5em;
     width: 100%;
     margin: 0em auto 2em;
-    background-color: #DDDBF4;
-    border: .1em solid #A19CD2;
+    background-color: var(--input-blue);
+    border: .1em solid var(--border-blue);
     font-family: 'Roboto';
-    color:  #120B67;
+    color:  var(--base-blue);
 }
 input::placeholder{
-    color: #A19CD2;
+    color: var(--border-blue);
     font-family: 'Roboto';
 }
 input:focus{
     outline: none;
-    border: .1em solid #120B67;
+    border: .1em solid var(--base-blue);
 }
 textarea{
     border-radius: .5em;
     padding: .5em;
     width: 100%;
-    background-color: #DDDBF4;
-    border: .1em solid #A19CD2;
+    background-color: var(--input-blue);
+    border: .1em solid var(--border-blue);
     font-family: 'Roboto';
-    color:  #120B67;
+    color:  var(--base-blue);
 }
 textarea::placeholder{
-    color: #A19CD2;
+    color: var(--border-blue);
     font-family: 'Roboto';
 }
 textarea:focus{
     outline: none;
-    border: .1em solid #120B67;
+    border: .1em solid var(--base-blue);
 }
 /**** MOBILE ****/
 @media only screen and (max-width: 480px) {

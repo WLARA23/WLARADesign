@@ -2,33 +2,53 @@ h1{
     font-weight: 700;
     font-size: 3em;
     padding: 0;
-    padding-bottom: .5em;
     margin: 0;
     display: block;
     width: 100%;
 }
-h2{
+.row{
     padding: 0;
     margin: 0;
+}
+h2{
+    padding: 0;
+    margin: 1em 0 0;
     font-weight: 700;
     font-size: 2em;
 }
 h3{
     font-size: 1.4em;
     padding: 0;
-    margin: 0;
+    margin: 1em 0 0;
     font-weight: 700;
 }
 .project{
-    padding: 2em 10em;
+    padding: 1em 10em;
 }
 img{
     width: 70%;
     height: auto;
-    margin: auto;
+    margin: 1em auto 0;
     border-radius: .5em;
 }
 p{
     padding: .5em;
     font-size: 1.3em;
+    margin: 0;
+}
+.other-projects{
+    background-color: var(--border-blue);
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.marginbh2{
+    margin-bottom: 1em;
+}
+.wdil .row{
+    background-color: var(--border-blue);
+    border-radius: .7em;
+    margin-bottom: 1em;
+}
+.wdil .row p{
+    color: var(--base-blue);
 }

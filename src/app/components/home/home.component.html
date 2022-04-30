@@ -3,13 +3,13 @@
         <img class="portrait" src="../../../assets/imgs/Autorretrato_Sin_Fondo.png" alt="Portrait">
     </div>
     <div class="greeting">
-        <h2>{{languagesJSON[languagePosition].hello}}</h2>
+        <h2>{{(languagesJSON$ | async)?.hello}}</h2>
         <h1>Willy Lara Campos</h1>
-        <h3>{{languagesJSON[languagePosition].roles}}</h3>
+        <h3>{{(languagesJSON$ | async)?.roles}}</h3>
     </div>
     <div class="row main-skills">
         <div class="col">
-            <h4 class="text-right">{{languagesJSON[languagePosition].main_skills}}</h4>
+            <h4 class="text-right">{{(languagesJSON$ | async)?.main_skills}}</h4>
             <img src="../../../assets/imgs/svg/icon_figma.svg" alt="Figma icon">
             <img src="../../../assets/imgs/svg/icon_inkscape.svg" alt="Inkscape icon">
             <img src="../../../assets/imgs/svg/icon_html5.svg" alt="HTML icon">
@@ -21,11 +21,11 @@
     <div class="row recent-projects">
         <div class="col-sm-6"></div>
         <div class="col-sm-6">
-            <h4>{{languagesJSON[languagePosition].recent_projects}}</h4>
-            <div class="img-recent-project" (click)="projectNumber(Projects[Projects.length-1].id)" (click)="openProjectHome()">
+            <h4>{{(languagesJSON$ | async)?.recent_projects}}</h4>
+            <div routerLink="/project/{{Projects[Projects.length-1].date}}/{{Projects[Projects.length-1].id}}" class="img-recent-project" (click)="setProjectId(Projects[Projects.length-1].id)">
                 <img [src]="Projects[Projects.length-1].general_project_image" alt="{{Projects[Projects.length-1].project_name}}">
             </div>
-            <div class="img-recent-project" (click)="projectNumber(Projects[Projects.length-2].id)" (click)="openProjectHome()">
+            <div routerLink="/project/{{Projects[Projects.length-2].date}}/{{Projects[Projects.length-2].id}}" class="img-recent-project" (click)="setProjectId(Projects[Projects.length-2].id)">
                 <img [src]="Projects[Projects.length-2].general_project_image" alt="{{Projects[Projects.length-2].project_name}}">
             </div>
         </div>
@@ -33,21 +33,26 @@
 </div>
 <div class="row portfolio">
     <div class="col-12">
-        <h2>{{languagesJSON[languagePosition].portfolio}}</h2>
+        <h2>{{(languagesJSON$ | async)?.portfolio}}</h2>
             <!--CARD-->
-            <div *ngFor="let newProject of Projects" class="card-portfolio-home" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
-                <div class="img-portfolio-home">
+            <div routerLink="/project/{{newProject.date}}/{{newProject.id}}" *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="setProjectId(newProject.id)">
+                <div class="project-card-img">
                     <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
                 </div>
-                <div class="info-portfolio-home">
-                    <h3 class="project-name">{{newProject.project_name}}</h3>
-                    <!--<img src="../../../assets/imgs/svg/icon_project_html.svg" alt="Skill">-->
-                    <!--<img src="../../../assets/imgs/svg/icon_project_css.svg" alt="Skill">-->
+                <div class="project-card-info">
+                    <div class="row">
+                        <div class="col-9">
+                            <h3 class="project-name">{{newProject.project_name}}</h3>
+                        </div>
+                        <div class="col-3">
+                            <p class="project-date">{{newProject.date}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--CARD-->
         <div>
-            <span class="btn-see-more" (click)="openPortfolioHome()">{{languagesJSON[languagePosition].see_more}}</span>
+            <span class="btn-see-more" routerLink="/portfolio" (click)="scrollUp()">{{(languagesJSON$ | async)?.see_more}}</span>
         </div>        
     </div>    
 </div>

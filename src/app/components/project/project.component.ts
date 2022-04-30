@@ -1,7 +1,9 @@
-import { Component, EventEmitter, OnInit, Input} from '@angular/core';
+import { Component, OnInit,} from '@angular/core';
 
 import doneProject from 'src/assets/json/projects.json';
-import languages from 'src/assets/json/languages.json';
+import { Observable } from 'rxjs';
+import { LanguageServiceService } from 'src/app/services/language-service.service';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
   selector: 'app-project',
@@ -10,16 +12,31 @@ import languages from 'src/assets/json/languages.json';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  //VARIABLES 
+  languagesJSON$: Observable<any>;
 
-  @Input() id = '';
-  languagesJSON: any = languages;
-  @Input() languagePosition = 0;
+  id:any = 0;
 
   Projects: any = doneProject;
 
+  //CONSTRUCTOR
+  constructor(languageService:LanguageServiceService, private projectsService:ProjectsService) { 
+    this.languagesJSON$ = languageService.languageObservable;
+    this.id = projectsService.idObservable;
+  }
+
   ngOnInit(): void {   
 
+  }
+
+  setProjectId(id:number):void{
+    this.projectsService.idObservableData = id;
+    this.id = this.projectsService.idObservable;
+    this.scrollUp();
+  }
+
+  scrollUp():void{
+    window.scroll(0, 0);
   }
 
 }

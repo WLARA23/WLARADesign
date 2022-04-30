@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
-import languages from 'src/assets/json/languages.json';
+import { LanguageServiceService } from './services/language-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,12 @@ import languages from 'src/assets/json/languages.json';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  //VARIABLES
   title = 'WLARADesign';
 
-  languagesJSON: any = languages;
-  language:string = "English";
-  languagePosition:number = 0;
+  languagesJSON$: Observable<any>;
+  language:string = "Español";
 
   home:boolean = true;
   skills:boolean = false;
@@ -20,11 +22,15 @@ export class AppComponent implements OnInit {
   about:boolean = false;
   contact:boolean = false;
   project:boolean = false;
-  projectId:string = "";
 
   menu:boolean = false;
 
   screen:number = 0;
+
+  //CONSTRUCTOE
+  constructor(private languageService:LanguageServiceService){
+    this.languagesJSON$ = languageService.languageObservable;
+  }
 
   ngOnInit(): void {
     this.screen = window.innerWidth;
@@ -32,6 +38,10 @@ export class AppComponent implements OnInit {
 
   @HostListener ("window:resize", []) onResize(){
     this.screen = window.innerWidth; 
+  }
+
+  scrollUp():void{
+    window.scroll(0, 0);
   }
 
   openMenu():void{
@@ -51,6 +61,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   openSkills():void {
@@ -62,6 +73,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   openPortfolio():void {
@@ -73,13 +85,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
-  }
-
-  openPortfolioHome(bool: boolean):void {
-    if(bool){
-      this.openPortfolio();
-      window.scroll(0, 0);
-    }    
+    this.scrollUp();
   }
 
   openAbout():void {
@@ -91,6 +97,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   openContact():void {
@@ -102,6 +109,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   openProject():void {
@@ -113,37 +121,19 @@ export class AppComponent implements OnInit {
     this.project = true;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   changeLanguage():void{
     let languageElement = document.getElementById("language");
     if(languageElement?.textContent == "Español"){
       this.language = "English";
-      this.languagePosition = 0;
       languageElement.innerHTML = this.language;
     }else if(languageElement?.textContent == "English"){
       this.language = "Español";
-      this.languagePosition = 1;
       languageElement.innerHTML = this.language;
     }
-  }
-
-  openProjectHome(bool: boolean):void {
-    if(bool){
-      this.openProject();
-      window.scroll(0, 0);
-    }    
-  }
-
-  openProjectPortfolio(bool: boolean):void {
-    if(bool){
-      this.openProject();
-      window.scroll(0, 0);
-    }    
-  }
-
-  projectNumber(id: string):void {
-    this.projectId = id;
-    window.scroll(0, 0); 
+    this.languageService.changeLanguage(this.language);
+    this.languagesJSON$ = this.languageService.languageObservable;
   }
 }
