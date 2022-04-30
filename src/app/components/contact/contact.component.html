@@ -1,10 +1,11 @@
-<form name="contact" action="POST" data-netlify="true">
+<form name="contact" method="POST" data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field">
     <div class="row contact">
         <div class="col-12">
             <h1>{{(languagesJSON$ | async)?.contact}}</h1>
             <p>{{(languagesJSON$ | async)?.let_me_know}}</p>
         </div>    
-        <div class="col-sm-6">            
+        <div class="col-sm-6">   
+            <input class="d-none" name="bot-field">         
             <label for="email">{{(languagesJSON$ | async)?.email}}</label>
             <input name="email" type="email" placeholder="{{(languagesJSON$ | async)?.email_example}}">
             <label for="fullname">{{(languagesJSON$ | async)?.fullname}}</label>
