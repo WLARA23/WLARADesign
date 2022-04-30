@@ -3,7 +3,7 @@
         <h1>{{Projects[id].project_name}}</h1>        
     </div>
 </div>
-<div class="row project">    
+<div class="row project">
     <div class="col">
         <h3>{{(languagesJSON$ | async)?.about_project}}</h3>
         <p>{{Projects[id].about}}</p>
@@ -156,7 +156,7 @@
     <div class="col-12">
         <h2>{{(languagesJSON$ | async)?.other_projects}}</h2>   
             <!--CARD-->
-            <div *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
+            <div routerLink="/project/{{newProject.date}}/{{newProject.id}}" *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="setProjectId(newProject.id)">
                 <div class="project-card-img">
                     <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
                 </div>
@@ -173,7 +173,7 @@
             </div>
             <!--CARD-->
             <div>
-                <span class="btn-see-more" (click)="openPortfolioHome()">{{(languagesJSON$ | async)?.see_more}}</span>
+                <span routerLink="/portfolio" class="btn-see-more" (click)="scrollUp()">{{(languagesJSON$ | async)?.see_more}}</span>
             </div>  
     </div>    
 </div>

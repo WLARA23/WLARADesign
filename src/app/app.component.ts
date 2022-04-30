@@ -9,6 +9,8 @@ import { LanguageServiceService } from './services/language-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  //VARIABLES
   title = 'WLARADesign';
 
   languagesJSON$: Observable<any>;
@@ -20,12 +22,12 @@ export class AppComponent implements OnInit {
   about:boolean = false;
   contact:boolean = false;
   project:boolean = false;
-  projectId:string = "";
 
   menu:boolean = false;
 
   screen:number = 0;
 
+  //CONSTRUCTOE
   constructor(private languageService:LanguageServiceService){
     this.languagesJSON$ = languageService.languageObservable;
   }
@@ -36,6 +38,10 @@ export class AppComponent implements OnInit {
 
   @HostListener ("window:resize", []) onResize(){
     this.screen = window.innerWidth; 
+  }
+
+  scrollUp():void{
+    window.scroll(0, 0);
   }
 
   openMenu():void{
@@ -55,6 +61,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   openSkills():void {
@@ -66,6 +73,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   openPortfolio():void {
@@ -77,13 +85,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
-  }
-
-  openPortfolioHome(bool: boolean):void {
-    if(bool){
-      this.openPortfolio();
-      window.scroll(0, 0);
-    }    
+    this.scrollUp();
   }
 
   openAbout():void {
@@ -95,6 +97,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   openContact():void {
@@ -106,6 +109,7 @@ export class AppComponent implements OnInit {
     this.project = false;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   openProject():void {
@@ -117,6 +121,7 @@ export class AppComponent implements OnInit {
     this.project = true;
 
     this.menu = false;
+    this.scrollUp();
   }
 
   changeLanguage():void{
@@ -130,24 +135,5 @@ export class AppComponent implements OnInit {
     }
     this.languageService.changeLanguage(this.language);
     this.languagesJSON$ = this.languageService.languageObservable;
-  }
-
-  openProjectHome(bool: boolean):void {
-    if(bool){
-      this.openProject();
-      window.scroll(0, 0);
-    }    
-  }
-
-  openProjectPortfolio(bool: boolean):void {
-    if(bool){
-      this.openProject();
-      window.scroll(0, 0);
-    }    
-  }
-
-  projectNumber(id: string):void {
-    this.projectId = id;
-    window.scroll(0, 0); 
   }
 }

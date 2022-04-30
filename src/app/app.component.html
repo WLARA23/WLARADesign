@@ -9,11 +9,11 @@
 
   <!-- UL DESKTOP -->
   <ul *ngIf="screen > 480">
-    <li (click)="openHome()" [ngStyle]="{background: home ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.home}}</li>
-    <li (click)="openSkills()" [ngStyle]="{background: skills ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.skills}}</li>
-    <li (click)="openPortfolio()" [ngStyle]="{background: portfolio ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.portfolio}}</li>
-    <li (click)="openAbout()" [ngStyle]="{background: about ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.about}}</li>
-    <li (click)="openContact()" [ngStyle]="{background: contact ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.contact}}</li>
+    <li routerLink="/home" (click)="openHome()" [ngStyle]="{background: home ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.home}}</li>
+    <li routerLink="/skills" (click)="openSkills()" [ngStyle]="{background: skills ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.skills}}</li>
+    <li routerLink="/portfolio" (click)="openPortfolio()" [ngStyle]="{background: portfolio ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.portfolio}}</li>
+    <li routerLink="/about" (click)="openAbout()" [ngStyle]="{background: about ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.about}}</li>
+    <li routerLink="/contact" (click)="openContact()" [ngStyle]="{background: contact ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.contact}}</li>
     <li (click)="changeLanguage()" id="language">Español</li>
   </ul>
   <!-- UL DESKTOP -->
@@ -75,12 +75,7 @@
 <!-- NAV -->
 
 <!-- HEADER -->
-<app-home *ngIf="home" (portfolio)="openPortfolioHome($event)" (project)="openProjectHome($event)" (projectId)="projectNumber($event)"></app-home>
-<app-skills *ngIf="skills"></app-skills>
-<app-portfolio *ngIf="portfolio" (project)="openProjectPortfolio($event)" (projectId)="projectNumber($event)"></app-portfolio>
-<app-about *ngIf="about"></app-about>
-<app-contact *ngIf="contact"></app-contact>
-<app-project *ngIf="project" [id]="projectId" (project)="openProjectHome($event)" (projectId)="projectNumber($event)" (portfolio)="openPortfolioHome($event)"></app-project>
+<router-outlet></router-outlet>
 <!-- HEADER -->
 
 <!-- FOOTER -->
