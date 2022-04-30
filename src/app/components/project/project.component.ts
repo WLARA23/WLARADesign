@@ -4,6 +4,7 @@ import doneProject from 'src/assets/json/projects.json';
 import { Observable } from 'rxjs';
 import { LanguageServiceService } from 'src/app/services/language-service.service';
 import { ProjectsService } from 'src/app/services/projects.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -20,9 +21,11 @@ export class ProjectComponent implements OnInit {
   Projects: any = doneProject;
 
   //CONSTRUCTOR
-  constructor(languageService:LanguageServiceService, private projectsService:ProjectsService) { 
+  constructor(languageService:LanguageServiceService, private projectsService:ProjectsService, private activatedRoute:ActivatedRoute) { 
     this.languagesJSON$ = languageService.languageObservable;
-    this.id = projectsService.idObservable;
+    this.activatedRoute.params.subscribe(s =>{
+      this.id = s["id"];
+    });
   }
 
   ngOnInit(): void {   
