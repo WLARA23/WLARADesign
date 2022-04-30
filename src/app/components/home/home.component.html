@@ -22,10 +22,10 @@
         <div class="col-sm-6"></div>
         <div class="col-sm-6">
             <h4>{{(languagesJSON$ | async)?.recent_projects}}</h4>
-            <div class="img-recent-project" (click)="projectNumber(Projects[Projects.length-1].id)" (click)="openProjectHome()">
+            <div routerLink="/project/{{Projects[Projects.length-1].date}}/{{Projects[Projects.length-1].id}}" class="img-recent-project" (click)="setProjectId(Projects[Projects.length-1].id)">
                 <img [src]="Projects[Projects.length-1].general_project_image" alt="{{Projects[Projects.length-1].project_name}}">
             </div>
-            <div class="img-recent-project" (click)="projectNumber(Projects[Projects.length-2].id)" (click)="openProjectHome()">
+            <div routerLink="/project/{{Projects[Projects.length-2].date}}/{{Projects[Projects.length-2].id}}" class="img-recent-project" (click)="setProjectId(Projects[Projects.length-2].id)">
                 <img [src]="Projects[Projects.length-2].general_project_image" alt="{{Projects[Projects.length-2].project_name}}">
             </div>
         </div>
@@ -35,7 +35,7 @@
     <div class="col-12">
         <h2>{{(languagesJSON$ | async)?.portfolio}}</h2>
             <!--CARD-->
-            <div *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
+            <div routerLink="/project/{{newProject.date}}/{{newProject.id}}" *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="setProjectId(newProject.id)">
                 <div class="project-card-img">
                     <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
                 </div>
@@ -52,7 +52,7 @@
             </div>
             <!--CARD-->
         <div>
-            <span class="btn-see-more" (click)="openPortfolioHome()">{{(languagesJSON$ | async)?.see_more}}</span>
+            <span class="btn-see-more" routerLink="/portfolio" (click)="scrollUp()">{{(languagesJSON$ | async)?.see_more}}</span>
         </div>        
     </div>    
 </div>

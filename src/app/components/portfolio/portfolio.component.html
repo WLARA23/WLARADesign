@@ -2,7 +2,7 @@
     <div class="col-12">
         <h1>{{(languagesJSON$ | async)?.portfolio}}</h1>
         <!--CARD-->
-        <div *ngFor="let newProject of Projects.reverse()" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectPortfolio()">
+        <div routerLink="/project/{{newProject.date}}/{{newProject.id}}" *ngFor="let newProject of Projects.reverse()" class="project-card" (click)="setProjectId(newProject.id)">
             <div class="project-card-img">
                 <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
             </div>

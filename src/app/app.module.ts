@@ -8,6 +8,19 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProjectComponent } from './components/project/project.component';
+import { RouterModule, Routes } from '@angular/router';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+
+const routes: Routes = [
+  { path: "home", component: HomeComponent },
+  { path: "skills", component: SkillsComponent },
+  { path: "portfolio", component: PortfolioComponent },
+  { path: "about", component: AboutComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "project/:date/:id", component: ProjectComponent },
+  { path: "", redirectTo: "/home", pathMatch:"full" },
+  { path: "**", component: PagenotfoundComponent }
+]
 
 @NgModule({
   declarations: [
@@ -17,10 +30,12 @@ import { ProjectComponent } from './components/project/project.component';
     PortfolioComponent,
     AboutComponent,
     ContactComponent,
-    ProjectComponent
+    ProjectComponent,
+    PagenotfoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

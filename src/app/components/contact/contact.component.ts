@@ -1,8 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LanguageServiceService } from 'src/app/services/language-service.service';
-
-import languages from 'src/assets/json/languages.json';
 
 @Component({
   selector: 'app-contact',
