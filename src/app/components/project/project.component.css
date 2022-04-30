@@ -52,3 +52,29 @@ p{
 .wdil .row p{
     color: var(--base-blue);
 }
+
+/**** MOBILE ****/
+@media only screen and (max-width: 480px) {
+    h1{
+        font-size: 2em;
+    }
+    .project{
+        padding: 1em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1em;
+    }
+    p{
+        padding: .5em 0;
+        font-size: 1em;
+    }
+    .text-right{
+        text-align: left !important;
+    }
+    img{
+        width: 100%;
+    }
+}

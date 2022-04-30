@@ -11,24 +11,24 @@
 </div>
 <!-- PROJECT GENERAL INFO -->
 <div class="row project">
-    <div class="col-6">
+    <div class="col-sm-6">
         <h3>{{(languagesJSON$ | async)?.objective}}</h3>
         <p>{{Projects[id].objective}}</p>
     </div>
-    <div class="col-6 text-center">
+    <div class="col-sm-6 text-center">
         <img [src]="Projects[id].general_project_image" alt="">
     </div>
     <div class="col">
         <div class="row">
-            <div class="col-4">
+            <div class="col-sm-4">
                 <h3>{{(languagesJSON$ | async)?.client}}</h3>
                 <p>{{Projects[id].client}}</p>
             </div>   
-            <div class="col-4">
+            <div class="col-sm-4">
                 <h3>{{(languagesJSON$ | async)?.date}}</h3>
                 <p>{{Projects[id].date}}</p>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <h3>{{(languagesJSON$ | async)?.role}}</h3>
                 <p>{{Projects[id].main_role}} <br>{{Projects[id].sec_role}}</p>
             </div>   
@@ -60,19 +60,19 @@
     <div class="col">
         <h2>{{(languagesJSON$ | async)?.visual_identity}}</h2>
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6">
                 <p>{{Projects[id].visual_identity_1}}</p>
             </div>
-            <div class="col-6">
+            <div class="col-sm-6">
                 <p>{{Projects[id].visual_identity_2}}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6">
                 <h3>{{(languagesJSON$ | async)?.typography}}</h3>
                 <img class="w-100" [src]="Projects[id].typography_image" alt="">
             </div>
-            <div class="col-6">
+            <div class="col-sm-6">
                 <h3>{{(languagesJSON$ | async)?.colors}}</h3>
                 <img class="w-100" [src]="Projects[id].colors_image" alt="">
             </div>
@@ -104,10 +104,10 @@
     <div class="col">
         <h2>{{(languagesJSON$ | async)?.implementations}}</h2>
         <div class="row">            
-            <div class="col-6">
+            <div class="col-sm-6">
                 <p>{{Projects[id].implementations_1}}</p>
             </div>
-            <div class="col-6">
+            <div class="col-sm-6">
                 <p>{{Projects[id].implementations_2}}</p>
             </div>
         </div>
@@ -125,26 +125,26 @@
     <div class="col wdil">
         <h2 class="marginbh2">{{(languagesJSON$ | async)?.what_i_learn}}</h2>
         <div class="row">
-            <div class="col-4 text-right font-weight-bold">
+            <div class="col-sm-4 text-right font-weight-bold">
                 <p>{{Projects[id].learning_1}}</p>
             </div>
-            <div class="col-8">
+            <div class="col-sm-8">
                 <p>{{Projects[id].learning_1_description}}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-4 text-right font-weight-bold">
+            <div class="col-sm-4 text-right font-weight-bold">
                 <p>{{Projects[id].learning_2}}</p>
             </div>
-            <div class="col-8">
+            <div class="col-sm-8">
                 <p>{{Projects[id].learning_2_description}}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-4 text-right font-weight-bold">
+            <div class="col-sm-4 text-right font-weight-bold">
                 <p>{{Projects[id].learning_3}}</p>
             </div>
-            <div class="col-8">
+            <div class="col-sm-8">
                 <p>{{Projects[id].learning_3_description}}</p>
             </div>
         </div>
