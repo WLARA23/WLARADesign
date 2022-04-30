@@ -17,6 +17,33 @@
 <body>
   <section class="container-fluid min-height">
     <app-root></app-root>
+
+    <!-- FORM -->
+    <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" hidden>
+      <p>
+        <label for="email">{{(languagesJSON$ | async)?.email}}</label>
+        <input name="email" type="email" placeholder="{{(languagesJSON$ | async)?.email_example}}">
+      </p>
+      <p>
+        <label for="fullname">{{(languagesJSON$ | async)?.fullname}}</label>
+        <input name="fullname" type="text" placeholder="{{(languagesJSON$ | async)?.fullname_info}}">
+      </p>
+      <p>
+        <label for="subject">{{(languagesJSON$ | async)?.subject}}</label>
+        <input name="subject" type="text" placeholder="{{(languagesJSON$ | async)?.subject_info}}">  
+      </p>
+      <p>
+        <label for="message">{{(languagesJSON$ | async)?.message}}</label>
+        <textarea name="message" id="message" cols="30" rows="11" placeholder="{{(languagesJSON$ | async)?.message_info}}"></textarea>
+      </p>
+      <div data-netlify-recaptcha="true"></div>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+    <!-- FORM -->
+
+
   </section>
 </body>
 
