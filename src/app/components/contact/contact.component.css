@@ -73,5 +73,10 @@ textarea:focus{
     .contact{
         padding: 1em;
     }
+    .btn-see-more{
+        padding: .5em 2em;
+        width: 90%;
+        font-size: 1em;
+    } 
 
 }
