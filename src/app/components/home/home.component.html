@@ -35,7 +35,7 @@
     <div class="col-12">
         <h2>{{languagesJSON[languagePosition].portfolio}}</h2>
             <!--CARD-->
-            <div *ngFor="let newProject of Projects" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
+            <div *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
                 <div class="project-card-img">
                     <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
                 </div>

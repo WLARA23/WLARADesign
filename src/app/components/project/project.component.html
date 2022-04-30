@@ -122,8 +122,8 @@
 
 <!-- WHAT DID I LEARN? -->
 <div class="row project">
-    <div class="col">
-        <h2>{{languagesJSON[languagePosition].what_i_learn}}</h2>
+    <div class="col wdil">
+        <h2 class="marginbh2">{{languagesJSON[languagePosition].what_i_learn}}</h2>
         <div class="row">
             <div class="col-4 text-right font-weight-bold">
                 <p>{{Projects[id].learning_1}}</p>
@@ -156,7 +156,7 @@
     <div class="col-12">
         <h2>{{languagesJSON[languagePosition].other_projects}}</h2>   
             <!--CARD-->
-            <div *ngFor="let newProject of Projects" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
+            <div *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
                 <div class="project-card-img">
                     <img [src]="newProject.general_project_image" alt="{{newProject.project_name}}">
                 </div>

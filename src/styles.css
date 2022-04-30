@@ -7,6 +7,7 @@
     --base-blue: #120B67;
     --gold: #D7C34C;
     --light-gold: #F0D84A;
+    --input-gold: #FFF2A7;
     --light-gray: #d3d3d3;
 }
 body{
@@ -63,9 +64,9 @@ body{
     width: 90% !important;
 }
 .project-date{
-    font-size: 1.2em;
-    padding: .6em;
-    margin: 0;
+    font-size: 1.2em !important;
+    padding: .6em !important;
+    margin: 0 !important;
 }
 .project-card:hover{
     cursor: pointer;
@@ -84,9 +85,20 @@ body{
     border-radius: 0 !important;
 }
 .project-card-info{
-    padding: 0 .6em;
-    height: auto;
+    padding: 0 .6em !important;
+    height: auto !important;
     background-color: var(--input-blue);
+}
+.project-card:hover{
+    border: .1em solid var(--base-blue);
+    margin: 1.59em 1.6%;
+}
+.project-card:hover .project-card-info{
+    background: var(--base-blue);
+    color: var(--white);
+}
+.project-card:hover .project-card-info h3{
+    color: var(--white);
 }
 .project-card-info h3{
     display: inline-block;
@@ -94,7 +106,7 @@ body{
     padding: .6em 0 !important;
     width: fit-content;
     font-weight: 400 !important;
-    font-size: 1.3em;
+    font-size: 1.3em !important;
     color: var(--base-blue);
 }
 /* PROJECT CARD */
