@@ -47,6 +47,21 @@ textarea:focus{
     outline: none;
     border: .1em solid var(--base-blue);
 }
+.btn-see-more{
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    display: block;
+    background-color: var(--gold);
+    padding: .5em 10em;
+    font-size: 1.5em;
+    border: 0;
+    border-radius: .7em;
+}
+.btn-see-more:hover{
+    cursor: pointer;
+    background-color: var(--light-gold);
+}
 /**** MOBILE ****/
 @media only screen and (max-width: 480px) {
     h1{
