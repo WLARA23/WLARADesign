@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { LanguageServiceService } from 'src/app/services/language-service.service';
 
 import languages from 'src/assets/json/languages.json';
 
@@ -9,10 +11,13 @@ import languages from 'src/assets/json/languages.json';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  //VARIABLES 
+  languagesJSON$: Observable<any>;
 
-  languagesJSON: any = languages;
-  @Input() languagePosition = 0;
+  //CONSTRUCTOR
+  constructor(languageService:LanguageServiceService) { 
+    this.languagesJSON$ = languageService.languageObservable;
+  }
 
   ngOnInit(): void {
   }

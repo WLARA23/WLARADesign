@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
-import languages from 'src/assets/json/languages.json';
+import { LanguageServiceService } from './services/language-service.service';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,8 @@ import languages from 'src/assets/json/languages.json';
 export class AppComponent implements OnInit {
   title = 'WLARADesign';
 
-  languagesJSON: any = languages;
+  languagesJSON$: Observable<any>;
   language:string = "Español";
-  languagePosition:number = 1;
 
   home:boolean = true;
   skills:boolean = false;
@@ -25,6 +25,10 @@ export class AppComponent implements OnInit {
   menu:boolean = false;
 
   screen:number = 0;
+
+  constructor(private languageService:LanguageServiceService){
+    this.languagesJSON$ = languageService.languageObservable;
+  }
 
   ngOnInit(): void {
     this.screen = window.innerWidth;
@@ -119,13 +123,13 @@ export class AppComponent implements OnInit {
     let languageElement = document.getElementById("language");
     if(languageElement?.textContent == "Español"){
       this.language = "English";
-      this.languagePosition = 0;
       languageElement.innerHTML = this.language;
     }else if(languageElement?.textContent == "English"){
       this.language = "Español";
-      this.languagePosition = 1;
       languageElement.innerHTML = this.language;
     }
+    this.languageService.changeLanguage(this.language);
+    this.languagesJSON$ = this.languageService.languageObservable;
   }
 
   openProjectHome(bool: boolean):void {

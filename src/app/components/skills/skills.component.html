@@ -1,10 +1,10 @@
 <div class="row skills">
     <div class="col-12">
-        <h1>{{languagesJSON[languagePosition].skills}}</h1>
+        <h1>{{(languagesJSON$ | async)?.skills}}</h1>
     </div>
     <div class="col-sm-6">
-        <h2>{{languagesJSON[languagePosition].design_and_multimedia}}</h2>
-        <p>{{languagesJSON[languagePosition].design_and_multimedia_info}}</p>
+        <h2>{{(languagesJSON$ | async)?.design_and_multimedia}}</h2>
+        <p>{{(languagesJSON$ | async)?.design_and_multimedia_info}}</p>
             <div class="col-12 container-cards">
                 <!--SKILL-->
                 <div class="card-skill">
@@ -45,8 +45,8 @@
             </div>
     </div>
     <div class="col-sm-6">
-        <h2>{{languagesJSON[languagePosition].software_develop}}</h2>
-        <p>{{languagesJSON[languagePosition].software_develop_info}}</p>
+        <h2>{{(languagesJSON$ | async)?.software_develop}}</h2>
+        <p>{{(languagesJSON$ | async)?.software_develop_info}}</p>
             <div class="col-12 container-cards">
                 <!--SKILL-->
                 <div class="card-skill">
