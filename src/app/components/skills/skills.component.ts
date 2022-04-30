@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-import languages from 'src/assets/json/languages.json';
+import { Observable } from 'rxjs';
+import { LanguageServiceService } from 'src/app/services/language-service.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,10 +9,13 @@ import languages from 'src/assets/json/languages.json';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
-  
-  languagesJSON: any = languages;
-  @Input() languagePosition = 0;
+  //VARIABLES  
+  languagesJSON$: Observable<any>;
+
+  //CONSTRUCTOR
+  constructor(languageService:LanguageServiceService) { 
+    this.languagesJSON$ = languageService.languageObservable;
+  }
 
   ngOnInit(): void {
   }

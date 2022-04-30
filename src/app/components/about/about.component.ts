@@ -1,4 +1,6 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { LanguageServiceService } from 'src/app/services/language-service.service';
 
 import languages from 'src/assets/json/languages.json';
 
@@ -9,12 +11,14 @@ import languages from 'src/assets/json/languages.json';
 })
 export class AboutComponent implements OnInit {
 
-  languagesJSON: any = languages;
-  @Input() languagePosition = 0;
-
+  //VARIABLES 
+  languagesJSON$: Observable<any>;  
   screen:number = 0;
 
-  constructor() { }
+  //CONSTRUCTOR
+  constructor(languageService:LanguageServiceService) { 
+    this.languagesJSON$ = languageService.languageObservable;
+  }
 
   ngOnInit(): void {
     this.screen = window.innerWidth;

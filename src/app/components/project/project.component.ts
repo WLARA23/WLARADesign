@@ -2,6 +2,8 @@ import { Component, EventEmitter, OnInit, Input, Output} from '@angular/core';
 
 import doneProject from 'src/assets/json/projects.json';
 import languages from 'src/assets/json/languages.json';
+import { Observable } from 'rxjs';
+import { LanguageServiceService } from 'src/app/services/language-service.service';
 
 @Component({
   selector: 'app-project',
@@ -10,17 +12,21 @@ import languages from 'src/assets/json/languages.json';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
-
+  //VARIABLES 
   @Input() id = '';
-  languagesJSON: any = languages;
-  @Input() languagePosition = 0;
+  
+  languagesJSON$: Observable<any>;
 
   Projects: any = doneProject;
 
   @Output() portfolio = new EventEmitter<boolean>()
   @Output() project = new EventEmitter<boolean>()
   @Output() projectId = new EventEmitter<string>()
+
+  //CONSTRUCTOR
+  constructor(languageService:LanguageServiceService) { 
+    this.languagesJSON$ = languageService.languageObservable;
+  }
 
   ngOnInit(): void {   
 

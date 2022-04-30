@@ -1,21 +1,21 @@
 <div class="row contact">
     <div class="col-12">
-        <h1>{{languagesJSON[languagePosition].contact}}</h1>
-        <p>{{languagesJSON[languagePosition].let_me_know}}</p>
+        <h1>{{(languagesJSON$ | async)?.contact}}</h1>
+        <p>{{(languagesJSON$ | async)?.let_me_know}}</p>
     </div>
     <div class="col-sm-6">
-        <label for="email">{{languagesJSON[languagePosition].email}}</label>
-        <input type="email" placeholder="{{languagesJSON[languagePosition].email_example}}">
-        <label for="fullname">{{languagesJSON[languagePosition].fullname}}</label>
-        <input type="text" placeholder="{{languagesJSON[languagePosition].fullname_info}}">
-        <label for="subject">{{languagesJSON[languagePosition].subject}}</label>
-        <input type="text" placeholder="{{languagesJSON[languagePosition].subject_info}}">
+        <label for="email">{{(languagesJSON$ | async)?.email}}</label>
+        <input type="email" placeholder="{{(languagesJSON$ | async)?.email_example}}">
+        <label for="fullname">{{(languagesJSON$ | async)?.fullname}}</label>
+        <input type="text" placeholder="{{(languagesJSON$ | async)?.fullname_info}}">
+        <label for="subject">{{(languagesJSON$ | async)?.subject}}</label>
+        <input type="text" placeholder="{{(languagesJSON$ | async)?.subject_info}}">
     </div>
     <div class="col-sm-6">
-        <label for="maessage">{{languagesJSON[languagePosition].message}}</label>
-        <textarea name="message" id="message" cols="30" rows="11" placeholder="{{languagesJSON[languagePosition].message_info}}"></textarea>
+        <label for="maessage">{{(languagesJSON$ | async)?.message}}</label>
+        <textarea name="message" id="message" cols="30" rows="11" placeholder="{{(languagesJSON$ | async)?.message_info}}"></textarea>
     </div>
     <div class="col-12">
-        <span class="btn-see-more">{{languagesJSON[languagePosition].send}}</span>
+        <span class="btn-see-more">{{(languagesJSON$ | async)?.send}}</span>
     </div>
 </div>

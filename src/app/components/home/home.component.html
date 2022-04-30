@@ -3,13 +3,13 @@
         <img class="portrait" src="../../../assets/imgs/Autorretrato_Sin_Fondo.png" alt="Portrait">
     </div>
     <div class="greeting">
-        <h2>{{languagesJSON[languagePosition].hello}}</h2>
+        <h2>{{(languagesJSON$ | async)?.hello}}</h2>
         <h1>Willy Lara Campos</h1>
-        <h3>{{languagesJSON[languagePosition].roles}}</h3>
+        <h3>{{(languagesJSON$ | async)?.roles}}</h3>
     </div>
     <div class="row main-skills">
         <div class="col">
-            <h4 class="text-right">{{languagesJSON[languagePosition].main_skills}}</h4>
+            <h4 class="text-right">{{(languagesJSON$ | async)?.main_skills}}</h4>
             <img src="../../../assets/imgs/svg/icon_figma.svg" alt="Figma icon">
             <img src="../../../assets/imgs/svg/icon_inkscape.svg" alt="Inkscape icon">
             <img src="../../../assets/imgs/svg/icon_html5.svg" alt="HTML icon">
@@ -21,7 +21,7 @@
     <div class="row recent-projects">
         <div class="col-sm-6"></div>
         <div class="col-sm-6">
-            <h4>{{languagesJSON[languagePosition].recent_projects}}</h4>
+            <h4>{{(languagesJSON$ | async)?.recent_projects}}</h4>
             <div class="img-recent-project" (click)="projectNumber(Projects[Projects.length-1].id)" (click)="openProjectHome()">
                 <img [src]="Projects[Projects.length-1].general_project_image" alt="{{Projects[Projects.length-1].project_name}}">
             </div>
@@ -33,7 +33,7 @@
 </div>
 <div class="row portfolio">
     <div class="col-12">
-        <h2>{{languagesJSON[languagePosition].portfolio}}</h2>
+        <h2>{{(languagesJSON$ | async)?.portfolio}}</h2>
             <!--CARD-->
             <div *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="projectNumber(newProject.id)" (click)="openProjectHome()">
                 <div class="project-card-img">
@@ -52,7 +52,7 @@
             </div>
             <!--CARD-->
         <div>
-            <span class="btn-see-more" (click)="openPortfolioHome()">{{languagesJSON[languagePosition].see_more}}</span>
+            <span class="btn-see-more" (click)="openPortfolioHome()">{{(languagesJSON$ | async)?.see_more}}</span>
         </div>        
     </div>    
 </div>
