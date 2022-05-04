@@ -1,4 +1,4 @@
-<form name="contact" method="POST" netlify onsubmit="submit" netlify-honeypot="bot-field">
+<form (submit)="sendContact(contactForm)" #contactForm="ngForm" class="form" name="contact">
     <div class="row contact">
         <div class="col-12">
             <h1>{{(languagesJSON$ | async)?.contact}}</h1>
@@ -7,15 +7,15 @@
         <div class="col-sm-6">   
             <input class="d-none" name="bot-field">         
             <label for="email">{{(languagesJSON$ | async)?.email}}</label>
-            <input name="email" type="email" placeholder="{{(languagesJSON$ | async)?.email_example}}">
+            <input name="email" type="email" placeholder="{{(languagesJSON$ | async)?.email_example}}" [(ngModel)]="email">
             <label for="fullname">{{(languagesJSON$ | async)?.fullname}}</label>
-            <input name="fullname" type="text" placeholder="{{(languagesJSON$ | async)?.fullname_info}}">
+            <input name="fullname" type="text" placeholder="{{(languagesJSON$ | async)?.fullname_info}}" [(ngModel)]="fullname">
             <label for="subject">{{(languagesJSON$ | async)?.subject}}</label>
-            <input name="subject" type="text" placeholder="{{(languagesJSON$ | async)?.subject_info}}">            
+            <input name="subject" type="text" placeholder="{{(languagesJSON$ | async)?.subject_info}}" [(ngModel)]="subject">            
         </div>
         <div class="col-sm-6">
             <label for="message">{{(languagesJSON$ | async)?.message}}</label>
-            <textarea name="message" id="message" cols="30" rows="11" placeholder="{{(languagesJSON$ | async)?.message_info}}"></textarea>
+            <textarea name="message" id="message" cols="30" rows="11" placeholder="{{(languagesJSON$ | async)?.message_info}}" [(ngModel)]="message"></textarea>
         </div>
         <div class="col-12">
             <div netlify-recaptcha="true"></div>
