@@ -1,4 +1,4 @@
-<form action="/success/" (submit)="sendContact(contactForm)" #contactForm="ngForm" class="form" name="contact">
+<form (submit)="sendContact(contactForm)" #contactForm="ngForm" class="form" name="contact">
     <div class="row contact">
         <div class="col-12">
             <h1>{{(languagesJSON$ | async)?.contact}}</h1>

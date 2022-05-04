@@ -19,7 +19,7 @@
     <app-root></app-root>
 
     <!-- FORM -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <form action="/success/" name="contact" netlify netlify-honeypot="bot-field" hidden>
       <p>
         <label for="email">{{(languagesJSON$ | async)?.email}}</label>
         <input name="email" type="email">
