@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { LanguageServiceService } from 'src/app/services/language-service.service';
 import { NetlifyFormsService } from 'src/app/services/netlify-forms.service';
@@ -25,7 +26,7 @@ export class ContactComponent implements OnInit {
   emailFailed: any;
 
   //CONSTRUCTOR
-  constructor(languageService:LanguageServiceService, private netlifyForms: NetlifyFormsService) { 
+  constructor(languageService:LanguageServiceService, private netlifyForms: NetlifyFormsService, private router:Router) { 
     this.languagesJSON$ = languageService.languageObservable;
   }
 
@@ -58,7 +59,7 @@ export class ContactComponent implements OnInit {
           this.emailSent = false;
         }, 10000);
         contactForm.resetForm();
-        alert("¡Enviado satisfactoriamente!");
+        this.router.navigate(['success']);
       },
       (err) => {
         this.loading = false;
