@@ -50,7 +50,23 @@ export class ContactComponent implements OnInit {
       ...data,
     } as Feedback;
 
-    this.formStatusSub = this.netlifyForms.submitFeedback(entry).subscribe();
+    this.formStatusSub = this.netlifyForms.submitFeedback(entry).subscribe(
+      (res) => {
+        this.loading = false;
+        this.emailSent = true;
+        setTimeout(() => {
+          this.emailSent = false;
+        }, 10000);
+        contactForm.resetForm();
+      },
+      (err) => {
+        this.loading = false;
+        this.emailFailed = true;
+        setTimeout(() => {
+          this.emailFailed = false;
+        }, 10000);
+      }
+    );
   }
 
   ngOnDestroy() {
