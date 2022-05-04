@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SuccessComponent } from './components/success/success.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: "portfolio", component: PortfolioComponent },
   { path: "about", component: AboutComponent },
   { path: "contact", component: ContactComponent },
+  { path: "success", component: SuccessComponent },
   { path: "project/:date/:id", component: ProjectComponent },
   { path: "", redirectTo: "/home", pathMatch:"full" },
   { path: "**", component: PagenotfoundComponent }
@@ -33,7 +35,8 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     ProjectComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
