@@ -24,7 +24,7 @@ export class NetlifyFormsService {
 
   private submitForm(entry: HttpParams): Observable<string> {
     return this.http
-      .post("/success", entry.toString(), {
+      .post("/", entry.toString(), {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         responseType: "text",
       })

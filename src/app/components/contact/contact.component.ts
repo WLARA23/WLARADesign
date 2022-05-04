@@ -58,6 +58,7 @@ export class ContactComponent implements OnInit {
           this.emailSent = false;
         }, 10000);
         contactForm.resetForm();
+        alert("¡Enviado satisfactoriamente!");
       },
       (err) => {
         this.loading = false;
