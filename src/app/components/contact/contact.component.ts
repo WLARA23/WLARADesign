@@ -15,10 +15,10 @@ export class ContactComponent implements OnInit {
   //VARIABLES 
   languagesJSON$: Observable<any>;
   private formStatusSub: Subscription = new Subscription;
-  email: any;
-  fullname: any;
-  subject: any;
-  message: any;
+  email: string = "";
+  fullname: string = "";
+  subject: string = "";
+  message: string = "";
 
   loading: any;
   emailSent: any;
@@ -44,31 +44,13 @@ export class ContactComponent implements OnInit {
       fullname: this.fullname,
       subject: this.subject,
       message: this.message
-        ? "Enviado"
-        : "No enviado",
     };
 
     const entry = {
       ...data,
     } as Feedback;
 
-    this.formStatusSub = this.netlifyForms.submitFeedback(entry).subscribe(
-      (res) => {
-        this.loading = false;
-        this.emailSent = true;
-        setTimeout(() => {
-          this.emailSent = false;
-        }, 10000);
-        contactForm.resetForm();
-      },
-      (err) => {
-        this.loading = false;
-        this.emailFailed = true;
-        setTimeout(() => {
-          this.emailFailed = false;
-        }, 10000);
-      }
-    );
+    this.formStatusSub = this.netlifyForms.submitFeedback(entry).subscribe();
   }
 
   ngOnDestroy() {
