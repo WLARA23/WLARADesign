@@ -18,7 +18,6 @@
             <textarea name="message" id="message" cols="30" rows="11" placeholder="{{(languagesJSON$ | async)?.message_info}}" [(ngModel)]="message"></textarea>
         </div>
         <div class="col-12">
-            <div netlify-recaptcha="true"></div>
             <button class="btn-see-more" type="submit">{{(languagesJSON$ | async)?.send}}</button>
         </div>
     </div>
