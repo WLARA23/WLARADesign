@@ -13,7 +13,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 export class PortfolioComponent implements OnInit {
 
   //VARIABLES 
-  Projects: any = doneProject;
+  Projects: any = this.getReverseProjects();
   languagesJSON$: Observable<any>;
 
   //CONSTRUCTOR
@@ -22,6 +22,14 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  getReverseProjects(): any{
+    let pivot = [];
+    for (let i = doneProject.length - 1; i >= 0; i--) {
+      pivot.push(doneProject[i]);
+    }
+    return pivot;
   }
 
   setProjectId(id:number):void{
