@@ -9,8 +9,17 @@ h1{
     min-height: 75vh;
 }
 
-/**** MOBILE ****/
-@media only screen and (max-width: 480px) {
+/*************************MEDIA QUERIES MOBILE*************************/
+@media only screen and (max-width: 576px) {
+    h1{
+        font-size: 2em;
+    }
+    .portfolio{
+        padding: 1em;
+    }
+}
+/*************************MEDIA QUERIES TABLET*************************/
+@media only screen and (min-width:576.1px) and (max-width: 992px) {
     h1{
         font-size: 2em;
     }

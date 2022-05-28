@@ -62,13 +62,37 @@ textarea:focus{
     cursor: pointer;
     background-color: var(--light-gold);
 }
-/**** MOBILE ****/
-@media only screen and (max-width: 480px) {
+/*************************MEDIA QUERIES MOBILE*************************/
+@media only screen and (max-width: 576px) {
     h1{
         font-size: 2em;
     }
     label{
         font-size: 1em;
+    }
+    .contact{
+        padding: 1em;
+    }
+    .btn-see-more{
+        padding: .5em 2em;
+        width: 90%;
+        font-size: 1em;
+    } 
+
+}
+/*************************MEDIA QUERIES TABLET*************************/
+@media only screen and (min-width:576.1px) and (max-width: 992px) {
+    h1{
+        font-size: 2em;
+    }
+    label{
+        font-size: 1em;
+    }
+    .col-sm-6{
+        width: 100%;
+        display: block;
+        flex: none;
+        max-width: 100%;
     }
     .contact{
         padding: 1em;

@@ -111,8 +111,8 @@ body{
 }
 /* PROJECT CARD */
 
-/**** MOBILE ****/
-@media only screen and (max-width: 480px) {
+/*************************MEDIA QUERIES MOBILE*************************/
+@media only screen and (max-width: 576px) {
     .btn-see-more{
         padding: .5em 2em;
         width: 90%;
@@ -142,6 +142,45 @@ body{
     }
     .project-card-info p{
         font-size: 1em !important;
+    }
+    /* PROJECT CARD */
+}
+/*************************MEDIA QUERIES TABLET*************************/
+@media only screen and (min-width:576.1px) and (max-width: 992px) {
+    .btn-see-more{
+        padding: .5em 2em;
+        width: 90%;
+        font-size: 1em;
+    } 
+    #languageMobile{
+        margin-left: 2em;
+        margin-top: 1em;
+        padding: .5em 2em;
+        color: var(--base-blue);
+        background-color: var(--light-blue);
+        display: block;
+        font-weight: 700;
+        text-align: center;
+    }
+    #languageMobile:hover{
+        font-weight: 700;
+        background-color: var(--light-blue) !important;
+    }
+    /* PROJECT CARD */
+    .project-card{
+        width: 45%;
+        margin: 1em 1.6%;
+    }
+    .project-card:hover{
+        border: .1em solid var(--base-blue);
+        margin: .9em 1.6%;
+    }
+    .project-card-info h3{
+        font-size: 1em !important;
+    }
+    .project-card-info p{
+        font-size: 1em !important;
+        text-align: right !important;
     }
     /* PROJECT CARD */
 }

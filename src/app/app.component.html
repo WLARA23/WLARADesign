@@ -8,7 +8,7 @@
   </span>
 
   <!-- UL DESKTOP -->
-  <ul *ngIf="screen > 480">
+  <ul *ngIf="screen > 992">
     <li routerLink="/home" (click)="openHome()" [ngStyle]="{background: home ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.home}}</li>
     <li routerLink="/skills" (click)="openSkills()" [ngStyle]="{background: skills ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.skills}}</li>
     <li routerLink="/portfolio" (click)="openPortfolio()" [ngStyle]="{background: portfolio ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.portfolio}}</li>
@@ -19,7 +19,7 @@
   <!-- UL DESKTOP -->
 
   <!-- UL MOBILE -->
-  <ul *ngIf="screen <= 480" [ngStyle]="{left: menu ? '-1em' : '-25em'}">
+  <ul *ngIf="screen <= 992" [ngStyle]="{left: menu ? '-1em' : '-25em'}">
     <li routerLink="/home" (click)="openHome()" [ngStyle]="{fontWeight: home ? '700' : '400', color: home ? '#FFFFFF' : '#a8a8a8'}">
       <span [ngStyle]="{background: home ? '#ffffff' : '#120B67'}"></span>
       <svg [ngStyle]="{color: home ? '#ffffff' : '#a8a8a8'}" width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -61,11 +61,11 @@
   <!-- UL MOBILE -->
   
   <span class="icons-sn">
-    <a href="https://www.facebook.com/wlara.design">
-      <img class="social-networks align-center facebook" src="../assets/imgs/svg/icon_facebook.svg" alt="Logo">
+    <a href="https://instagram.com/wlara.design" target="_blank">
+      <img class="social-networks align-center instagram" src="../assets/imgs/svg/icon_instagram.svg" alt="Logo">
     </a>
-    <a href="https://instagram.com/wlara.design">
-      <img class="social-networks align-center" src="../assets/imgs/svg/icon_instagram.svg" alt="Logo">
+    <a href="https://www.linkedin.com/in/willylaracampos/" target="_blank">
+      <img class="social-networks align-center" src="../assets/imgs/svg/linkedin.svg" alt="Logo">
     </a>
     
     

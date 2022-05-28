@@ -1,0 +1,60 @@
+h1{
+    font-weight: 700;
+    font-size: 5em;
+    padding: 0;
+    margin: .5em 0 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: var(--base-blue);
+}
+h2{
+    font-weight: 700;
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: var(--base-blue);
+}
+.pagenotfound{
+    text-align: center;
+    padding: 2em 10em;
+    min-height: 75vh;
+}
+p{
+    padding: .5em;
+    font-size: 1.3em;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+/*************************MEDIA QUERIES MOBILE*************************/
+@media only screen and (max-width: 576px) {
+    h1{
+        font-size: 3em;
+    }
+    .pagenotfound{
+        padding: 1em;
+        min-height: 80vh;
+    }
+    p{
+        padding: .5em 0;
+        font-size: 1em;
+    }
+}
+/*************************MEDIA QUERIES TABLET*************************/
+@media only screen and (min-width:576.1px) and (max-width: 992px) {
+    h1{
+        font-size: 3em;
+    }
+    .pagenotfound{
+        padding: 1em;
+        min-height: 80vh;
+    }
+    p{
+        padding: .5em 0;
+        font-size: 1em;
+    }
+}

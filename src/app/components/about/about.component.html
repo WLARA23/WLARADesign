@@ -1,13 +1,13 @@
 <div class="row about">
     <div class="col-sm-6">
         <h1>{{(languagesJSON$ | async)?.about}}</h1>
-        <img *ngIf="screen <= 480" src="../../../assets/imgs/about_portrait.png" alt="About portrait">
+        <img *ngIf="screen <= 992" src="../../../assets/imgs/about_portrait.png" alt="About portrait">
         <p>{{(languagesJSON$ | async)?.im_from}}</p>
         <p>{{(languagesJSON$ | async)?.im_student}}</p>
     </div>
     <div class="col-sm-6">
         <div>
-            <img *ngIf="screen > 480" src="../../../assets/imgs/about_portrait.png" alt="About portrait">
+            <img *ngIf="screen > 992" src="../../../assets/imgs/about_portrait.png" alt="About portrait">
         </div>        
         <p>{{(languagesJSON$ | async)?.ib}}</p>
         <p>{{(languagesJSON$ | async)?.i_speak}}</p>

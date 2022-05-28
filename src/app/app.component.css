@@ -10,7 +10,7 @@
 .nav ul li{
     display: inline-block;
     margin: 0 .5em;
-    padding: .5em 1.5em;
+    padding: .5em 1em;
     border-radius: 2em;
     background: var(--light-blue);
 }
@@ -41,23 +41,21 @@
     float: right;
 }
 .icons-nav{
-    width: 10%;
+    width: fit-content;
     padding: 0;
     margin: 0;
 }
 .icons-sn{
-    width: 10%;
+    width: fit-content;
     padding: 0;
     margin: 0;
 }
-/**** OTHER ****/
-@media (min-width: 991.99px) and (max-width: 1199.98px) {
+/*************************MEDIA QUERIES MOBILE*************************/
+@media only screen and (max-width: 576px) {
     
 }
-@media (min-width: 767.99px) and (max-width: 991.98px) {
-    
-}
-@media (min-width: 575.99px) and (max-width: 767.98px) {
+/*************************MEDIA QUERIES TABLET*************************/
+@media only screen and (min-width:576.1px) and (max-width: 992px) {
     
 }
 /****NAV****/
@@ -74,8 +72,8 @@ footer p{
 }
 /****FOOTER****/
 
-/**** MOBILE ****/
-@media only screen and (max-width: 480px) {
+/*************************MEDIA QUERIES MOBILE*************************/
+@media only screen and (max-width: 576px) {
     .nav ul{
         z-index: 1;
         padding: 6em 7em 70vh 1em;
@@ -136,7 +134,79 @@ footer p{
         height: 1.6em;
         margin: .8em 0 .5em .5em;
     }
-    .facebook{
+    .instagram{
+        display: none;
+    }
+    footer{
+        padding: 1.5em .5em;
+    }
+    footer p{
+        font-size: .7em;
+    }
+}
+/*************************MEDIA QUERIES TABLET*************************/
+@media only screen and (min-width:576.1px) and (max-width: 992px) {
+    .nav ul{
+        z-index: 1;
+        padding: 6em 7em 70vh 1em;
+        position: absolute;
+        top: 0;
+        left: -1em;
+        background: var(--base-blue);
+        border-radius: 1em;
+        transition: .5s;
+    }
+    .nav ul li{
+        margin: 0 .5em 0 0;
+        padding: .7em 1.5em .7em 0;
+        display: block;
+        color: var(--white);
+        background: none;
+    }
+    .nav ul li:hover{
+        background: none !important;
+        font-weight: 700;
+        color: var(--white);
+    }
+    .nav ul li svg{
+        display: inline-block;
+        color: var(--light-gray);
+        height: 1em;
+        margin-right: 1em;
+    }
+    .nav ul li span{
+        display: inline-block;
+        content: "";
+        background: var(--white);
+        width: .5em;
+        height: 1em;
+        margin-right: 2em;
+    }    
+    .menu{        
+        height: 1.5em;
+        display: inline-block;
+        width: fit-content;
+        margin: .8em .5em .5em 0;        
+    }
+    .logo{
+        margin: 0;
+    }
+    .icons-nav{
+        width: 60%;
+        text-align: center;
+    }
+    .icons-sn{
+        width: 20%;
+    }
+    .menu-container{
+        z-index: 5;
+        width: 20%;
+    }
+    .social-networks{
+        height: 1.6em;
+        margin: .8em 0 .5em .5em;
+    }
+    .instagram{
         display: none;
     }
     footer{

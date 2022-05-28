@@ -17,13 +17,37 @@ div img{
     margin: auto;
     width: 40%;
 }
-/**** MOBILE ****/
-@media only screen and (max-width: 480px) {
+/*************************MEDIA QUERIES MOBILE*************************/
+@media only screen and (max-width: 576px) {
     h1{
         font-size: 2em;
     }
     .about{
         padding: 1em;
+    }
+    p{
+        padding: .5em 0;
+        font-size: 1em;
+    }
+    div img{
+        display: block;
+        margin: auto;
+        width: 40%;
+    }
+}
+/*************************MEDIA QUERIES TABLET*************************/
+@media only screen and (min-width:576.1px) and (max-width: 992px) {
+    h1{
+        font-size: 2em;
+    }
+    .about{
+        padding: 1em;
+    }
+    .col-sm-6{
+        width: 100%;
+        display: block;
+        flex: none;
+        max-width: 100%;
     }
     p{
         padding: .5em 0;
