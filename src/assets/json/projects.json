@@ -138,5 +138,33 @@
         "learning_2_description": "Hay que saber implementar sombras en diseños, principalmente en identificadores, ya que no se recomienda, pero si se utiliza de buena manera, integrando cada elemento y brindando un poco de profundidad, se logra sin problema.",
         "learning_3": "Elementos innecesarios:",
         "learning_3_description": "Es fundamental reducir al máximo el identificador y eliminar elementos que se crean innecesarios o repetitivos."
+    },
+    {
+        "id": "5",
+        "project_name": "Real Tickets",
+        "about": "Marca personal enfocada al entrenamiento muscular. Pretende expresar que no solo los hombres hacen ejercicio, sino que también existe un nicho amplio de mujeres que tambien prectican este y otros deportes.",
+        "general_project_image": "../../../assets/imgs/realtickets/realtickets_logo.png",
+        "objective": "Crear una identidad visual completa que refleje los valores de la empresa. Que muestre la fuerza y el coraje que debe haber al entrenar, pero sin dejar de lado que la marca se enfoca principalmente a las mujeres.",
+        "date": "2021",
+        "client": "Curso Universitario",
+        "main_role": "Diseñador",
+        "sec_role": "Desarrollador",
+        "sketch": "Se realizaron diferentes ideas para el identificador que combinaban el nombre de la entrenadora, elementos de la disciplina y y referencias a ejercicios, sin embargo la que mejor se apegaba y contenía mayor seriedad era el diseño central.",
+        "sketch_image": "../../../assets/imgs/realtickets/realtickets_sketch.png",
+        "visual_identity_1": "Se opta por una sola tipografía, es este caso Gabriola. Esta tipografía nos permite expresar la feminidad debido a su estilo y dinamismo. Esta se complementa con 'Kim Lara' que están escritas en tipografías personalizadas.",
+        "visual_identity_2": "En cuanto a los colores elegidos se abarcan tonos grises, rojos y verdes, esto para lograr un equilibrio entre seriedad y profesionalismo (negro), fuerza y valentía (rojo) y la salud (verde). Del mismo modo estos colores hacen referencia a los colores de los discos de peso que se utilizan en el Power Lifting.",
+        "typography_image": "../../../assets/imgs/realtickets/realtickets_typography.png",
+        "colors_image": "../../../assets/imgs/realtickets/realtickets_colors.png",
+        "solution": "La integración de los elementos anteriores formarían el identificador visual de Kim Lara, marca con mucha personalidad y referencia al deporte y al público femenino.",
+        "solution_image": "../../../assets/imgs/realtickets/realtickets_solution.png",
+        "implementations_1": "Solamente se realizó el identificador gráfico, por lo que no posee implementaciones gráficas.",
+        "implementations_2": "Está más ambientado a su uso de manera digital.",
+        "implementations_image": "../../../assets/imgs/realtickets/realtickets_implementations.png",
+        "learning_1": "Personalización:",
+        "learning_1_description": "A pesar de haber diseñado un logo con bastante pregnancia, considero que pudo haberse mejorado en cuanto a las tipografías personalizadas.",
+        "learning_2": "Sombras:",
+        "learning_2_description": "Hay que saber implementar sombras en diseños, principalmente en identificadores, ya que no se recomienda, pero si se utiliza de buena manera, integrando cada elemento y brindando un poco de profundidad, se logra sin problema.",
+        "learning_3": "Elementos innecesarios:",
+        "learning_3_description": "Es fundamental reducir al máximo el identificador y eliminar elementos que se crean innecesarios o repetitivos."
     }
 ]

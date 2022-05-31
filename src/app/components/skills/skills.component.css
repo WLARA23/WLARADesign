@@ -41,8 +41,8 @@ p{
     margin: 0;
     padding: 0;
 }
-/**** MOBILE ****/
-@media only screen and (max-width: 480px) {
+/*************************MEDIA QUERIES MOBILE*************************/
+@media only screen and (max-width: 576px) {
     h1{
         font-size: 2em;
     }
@@ -51,6 +51,33 @@ p{
     }
     p{
         font-size: 1em;
+    }
+    .skills{
+        padding: 1em;
+    }
+    .card-skill img{
+        height: 1.5em;
+    }
+    .card-skill p{
+        font-size: 1em;
+    }
+}
+/*************************MEDIA QUERIES TABLET*************************/
+@media only screen and (min-width:576.1px) and (max-width: 992px) {
+    h1{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    p{
+        font-size: 1em;
+    }
+    .col-sm-6{
+        width: 100%;
+        display: block;
+        flex: none;
+        max-width: 100%;
     }
     .skills{
         padding: 1em;
