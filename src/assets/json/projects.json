@@ -2,7 +2,7 @@
     {
         "id": "0",
         "project_name": "Serpientes y Escaleras (Divina Comedia)",
-        "about": "Se plantea realizar los elementos gráficos de un vidojuego basado en el tradicional juego de mesa: serpientes y escaleras, por lo que se debe diseñar el tablero, personajes, escaleras, serpientes y demás elementos que ambienten el juego.",
+        "about": "Se plantea realizar los elementos gráficos de un videojuego basado en el tradicional juego de mesa: serpientes y escaleras, por lo que se debe diseñar el tablero, personajes, escaleras, serpientes y demás elementos que ambienten el juego. Todos los assets necesarios se desarrollarán utilizando el software libre de vectorizado Inkscape.",
         "general_project_image": "../../../assets/imgs/s&edc/s&edc_logo.png",
         "objective": "Diseñar todos los elementos gráficos necesarios para su implementación en un vidojuego tipo Serpientes y Escaleras, que se ambiente en el universo de la Divina Comedia de Dante Alighieri.",
         "date": "2019",
@@ -30,13 +30,13 @@
     {
         "id": "1",
         "project_name": "Angela's Nightmare",
-        "about": "Este videojuego nace a partir de la necesidad de entregar un trabajo universitario. El videojuego se ambienta en las pesadillas de una niña, y como la soledad y falta de atención por parte de sus padres puede impactar negativamente en ella.",
+        "about": "Este videojuego nace a partir de la necesidad de entregar un trabajo universitario. El videojuego se ambienta en las pesadillas de una niña, y como la soledad y falta de atención por parte de sus padres puede impactar negativamente en ella. Su desarrollo se llevará a cabo mediante Inkscape para el material gráfico y Java para la funcionalidad, así como la utilización de archivos JSON para guardar el avance.",
         "general_project_image": "../../../assets/imgs/angelasnightmare/angelasnightmare_logo.png",
         "objective": "Crear un videojuego con los conocimientos aprendidos en Java, que contenga ciertas pantallas en específico y elementos gráficos originales.",
         "date": "2020",
         "client": "Curso Universitario",
-        "main_role": "Programador",
-        "sec_role": "Diseñador",
+        "main_role": "Diseñador gráfico y UX | UI",
+        "sec_role": "Desarrollador",
         "sketch": "Lo primero que se realizó después de plantear la historia fue el estilo gráfico, por lo que se diseñó la personaje principal. Se realizó un boceto en papel primero para después ser vectorizado en Inkscape.",
         "sketch_image": "../../../assets/imgs/angelasnightmare/angelasnightmare_sketch.png",
         "visual_identity_1": "Cuenta con una sola tipografía: Ink Free, la cual con la paleta de colores seleccionada nos permite generar un ambiente tenso y oscuro. Funciona para recordarnos que estamos viviendo las pesadillas de Angela en nuestro propio cuerpo.",
@@ -58,7 +58,7 @@
     {
         "id": "2",
         "project_name": "KIARA Goddess",
-        "about": "Kiara Goddess es un emprendimiento costarricense enfocado a la venta de productos de belleza femeninos, tanto de maquillaje como de cuidado de la piel. Su catálogo es amplio como sus clientes, por lo que se debe velar por una imagen corporativa que refleje inclusión como su negocio.",
+        "about": "Kiara Goddess es un emprendimiento costarricense enfocado a la venta de productos de belleza femeninos, tanto de maquillaje como de cuidado de la piel. Su catálogo es amplio como sus clientes, por lo que se debe velar por una imagen corporativa que refleje inclusión como su negocio. Su desarrollo se lleva a cabo en Inkscape y Figma.",
         "general_project_image": "../../../assets/imgs/kiara/kiara_logo.png",
         "objective": "Crear una identidad visual completa para el negocio que refleje la belleza de la mujer, así como su fineza, delicadeza y fuerza. Se plantea realizar un imagotipo, que posea tanto firmas horizontales como compactas; así como la confección de su propio manual de marca con distintos elementos gráficos.",
         "date": "2020",
@@ -86,7 +86,7 @@
     {
         "id": "3",
         "project_name": "WLARA Design",
-        "about": "Emprendimiento propio enfocado a trabajar Freelancer y a aumentar el conocimiento acerca de mi persona en el ámbito laboral. Se compone de dos ejes fundamentales, el diseño y el desarrollo de software, sin embargo hace referencia principalmente al área gráfica.",
+        "about": "Emprendimiento propio enfocado a trabajar Freelancer y a aumentar el conocimiento acerca de mi persona en el ámbito laboral. Se compone de dos ejes fundamentales, el diseño y el desarrollo de software, sin embargo hace referencia principalmente al área gráfica. El diseño de todo el material se realiza en Inkscape y los elementos gráficos en Figma.",
         "general_project_image": "../../../assets/imgs/wlarad/wlarad_logo.png",
         "objective": "Crear una identidad visual completa que refleje los principios e ideas del diseño gráfico y el dasarrollo de software, así como la identificación de mi persona a partir de un identificador gráfico.",
         "date": "2021",
@@ -114,7 +114,7 @@
     {
         "id": "4",
         "project_name": "Kim Lara",
-        "about": "Marca personal enfocada al entrenamiento muscular. Pretende expresar que no solo los hombres hacen ejercicio, sino que también existe un nicho amplio de mujeres que tambien prectican este y otros deportes.",
+        "about": "Marca personal enfocada al entrenamiento muscular. Pretende expresar que no solo los hombres hacen ejercicio, sino que también existe un nicho amplio de mujeres que tambien prectican este y otros deportes. Su desarrollo se lleva a cabo en Inkscape.",
         "general_project_image": "../../../assets/imgs/kimlara/kimlara_logo.png",
         "objective": "Crear una identidad visual completa que refleje los valores de la empresa. Que muestre la fuerza y el coraje que debe haber al entrenar, pero sin dejar de lado que la marca se enfoca principalmente a las mujeres.",
         "date": "2021",
@@ -142,7 +142,7 @@
     {
         "id": "5",
         "project_name": "Real Tickets",
-        "about": "Sitio web mediante el cual el usuario puede adquirir entradas a eventos con categorías variadas, realizando el registro de la cantidad de asientos dependiendo del tipo de asiento (adulto o niño).",
+        "about": "Sitio web mediante el cual el usuario puede adquirir entradas a eventos con categorías variadas, realizando el registro de la cantidad de asientos dependiendo del tipo de asiento (adulto o niño). Su desarrollo se presenta en HTML, PHP, CSS, SCSS y JavaScript; mientras que su diseño se realiza en Figma.",
         "general_project_image": "../../../assets/imgs/realtickets/realtickets_logo.png",
         "objective": "Crear el frontend de un sitio web enfocado a la venta de ticketes en línea, de diferentes tipos de eventos: Artísticos, Cinemáticos, Académicos, etc; mediante el cual se puedan reservar espacios y buscar eventos por palabras clave.",
         "date": "2021",
@@ -170,7 +170,7 @@
     {
         "id": "6",
         "project_name": "Fuente de Poder y Fe",
-        "about": "Iglesia cristiana que quería realizar un cambio a su identificador gráfico. Se pretendía volver más sencillo para mayor pregnancia y para su correcto bordado en camisetas.",
+        "about": "Iglesia cristiana que quería realizar un cambio a su identificador gráfico. Se pretendía volver más sencillo para mayor pregnancia y para su correcto bordado en camisetas. El proceso de diseño se realiza en Inkscape.",
         "general_project_image": "../../../assets/imgs/fuentepoderfe/fuentepoderfe_logo.png",
         "objective": "Rediseñar el identificador gráfico de la iglesia Fuente de Poder y Fe, conservando los colores de la iglesia y algunos elementos gráficos.",
         "date": "2021",
@@ -198,7 +198,7 @@
     {
         "id": "7",
         "project_name": "Tierra a la Vista",
-        "about": "Videojuego realizado por tres personas que cumple con la teoría del juego y la teoría de la diversión, a partir de assets externos.",
+        "about": "Videojuego realizado por tres personas que cumple con la teoría del juego y la teoría de la diversión, a partir de assets externos. Su desarrollo se da mediante C# en el motor de videojuegos Unity 3D.",
         "general_project_image": "../../../assets/imgs/tierraalavista/tierraalavista_logo.png",
         "objective": "Desarrollar e implementar un videojuego 3D que su dificultad aumente con el paso del tiempo, utilizando assets gratuitos de terceros. Además, debe tener un sistema de puntaje para poder competir por el mejor puesto entre jugadores.",
         "date": "2021",
@@ -226,7 +226,7 @@
     {
         "id": "8",
         "project_name": "aMonchar!",
-        "about": "Aplicación móvil en Android a modo de recetario web en que los usuarios pueden registrarse y subir sus recetas personalizadas almacenadas por categorías.",
+        "about": "Aplicación móvil en Android a modo de recetario web en que los usuarios pueden registrarse y subir sus recetas personalizadas almacenadas por categorías. Su desarrollo se presenta con Java en la aplicación Android Studio; mientras que el diseño del logo se hace en Inkscape.",
         "general_project_image": "../../../assets/imgs/amonchar/amonchar_logo.png",
         "objective": "Desarrollar e implementar una aplicación móvil en Android con conexión a una API externa, una base de datos no relacional y un sistema de cuentas de usuario.",
         "date": "2021",
