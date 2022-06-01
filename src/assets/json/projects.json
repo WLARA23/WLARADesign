@@ -222,5 +222,33 @@
         "learning_2_description": "Siempre que se realiza un proyecto en que el usuario podrá interactuar directamente con él, se requiere una etapa de pruebas para pulir los detalles y eliminar errores.",
         "learning_3": "Funcionalidad:",
         "learning_3_description": "En esencia un videojuego es un conjunto de funcionalidades, por lo que hay que saber cuales elegir para que aporten jugabilidad, historia o diseño de niveles."
+    },
+    {
+        "id": "8",
+        "project_name": "aMonchar!",
+        "about": "Aplicación móvil en Android a modo de recetario web en que los usuarios pueden registrarse y subir sus recetas personalizadas almacenadas por categorías.",
+        "general_project_image": "../../../assets/imgs/amonchar/amonchar_logo.png",
+        "objective": "Desarrollar e implementar una aplicación móvil en Android con conexión a una API externa, una base de datos no relacional y un sistema de cuentas de usuario.",
+        "date": "2021",
+        "client": "Curso Universitario",
+        "main_role": "Desarrollador",
+        "sec_role": "Diseñador del logo",
+        "sketch": "Primeramente se realizó el boceto y confección del logo de la aplicación, así como su versión de ícono en la galería de aplicaciones del dispositivo.",
+        "sketch_image": "../../../assets/imgs/amonchar/amonchar_sketch.png",
+        "visual_identity_1": "Se utilizó una tipografía de fácil lectura en medios digitales que a su vez es bastante juvenil, lo que permite un contacto más directo con el público meta.",
+        "visual_identity_2": "En cuanto a los colores se usaron dos tonos neutros, uno oscuro y uno claro, y dos tonos que provoquen la sensación de hambre y se asocie con la comida al ser tonos cálidos.",
+        "typography_image": "../../../assets/imgs/amonchar/amonchar_typography.png",
+        "colors_image": "../../../assets/imgs/amonchar/amonchar_colors.png",
+        "solution": "Se optó por un diseño poco cargado, muy visual. La base de datos se maneja desde Firebase de manera no relacional permitiendo compartir diversas recetas entre todos los usuarios de la aplicación.",
+        "solution_image": "../../../assets/imgs/amonchar/amonchar_solution.png",
+        "implementations_1": "Se implementaron diversas pantallas de la aplicación, entre ellas la principal que muestra los cards de todas las recetas que están registradas en la aplicación. Además, se encuentra el perfil de usuario el cual le permite al usuario modificar información de su cuenta, así como agregar nuevas recetas a la aplicación y crear un plan semanal de alimentación.",
+        "implementations_2": "Asimismo, la aplicación contiene diferentes tipos de búsquedas, entre ellas las generales que buscan por coincidencias en los títulos de las recetas o las de categorías, así como una búsqueda por ingredientes en una receta.",
+        "implementations_image": "../../../assets/imgs/amonchar/amonchar_implementations.png",
+        "learning_1": "API:",
+        "learning_1_description": "Poder conectar nuestras aplicaciones a APIs externas nos permite obtener información que ya está centralizada de manera sencilla.",
+        "learning_2": "Firebase:",
+        "learning_2_description": "Un servicio en la nube como este permite almacenar datos que pueden ser consultados desde diferentes dispositivos que solo deben estar conectados a internet.",
+        "learning_3": "Permisos en Android:",
+        "learning_3_description": "Para utilizar distintos servicios o elementos de nuestro celular en la aplicación, se deben agregar los permisos necesarios en el manifiesto de nuestro proyecto."
     }
 ]
