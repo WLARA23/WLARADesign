@@ -250,5 +250,33 @@
         "learning_2_description": "Un servicio en la nube como este permite almacenar datos que pueden ser consultados desde diferentes dispositivos que solo deben estar conectados a internet.",
         "learning_3": "Permisos en Android:",
         "learning_3_description": "Para utilizar distintos servicios o elementos de nuestro celular en la aplicación, se deben agregar los permisos necesarios en el manifiesto de nuestro proyecto."
+    },
+    {
+        "id": "9",
+        "project_name": "WLARA Portfolio",
+        "about": "Portafolio web de Willy Lara Campos con posibilidad de contacto mediante correo electrónico a partir de un formulario en la sección de contacto. Se desarrolla con el framework Angular, junto con HTML, CSS, JavaScript y archivos JSON.",
+        "general_project_image": "../../../assets/imgs/wlaraportfolio/wlaraportfolio_logo.png",
+        "objective": "Diseñar y desarrollar un portafolio web que contenga un método de contacto directo y una página específica para cada proyecto.",
+        "date": "2022",
+        "client": "Proyecto Personal",
+        "main_role": "Diseñador UX | UI",
+        "sec_role": "Desarrollador Web",
+        "sketch": "En primera instancia se realiza un wireframe del sitio en el que se trabaja con escala de grises y bloques de información, para determinar el espacio y tamaños necesarios para una correcta visualización.",
+        "sketch_image": "../../../assets/imgs/wlaraportfolio/wlaraportfolio_sketch.png",
+        "visual_identity_1": "Se implementa una tipografía sin serif para fácil lectura en medios digitales. Asimismo, cabe mencionar que es la estipulada en el manual de marca de WLARA Design.",
+        "visual_identity_2": "En cuanto a los colores se utilizaron los de la marca WLARA Design, seleccionando un fondo claro agradable a la vista y que no canse mucho con el tiempo.",
+        "typography_image": "../../../assets/imgs/wlaraportfolio/wlaraportfolio_typography.png",
+        "colors_image": "../../../assets/imgs/wlaraportfolio/wlaraportfolio_colors.png",
+        "solution": "Con la implementación de los colores en el wireframe y los proyectos cargados mediante un JSON se logra una armonía en el sitio. Además, se realiza su diseño e implementación responsiva.",
+        "solution_image": "../../../assets/imgs/wlaraportfolio/wlaraportfolio_solution.png",
+        "implementations_1": "Se realizan todas las páginas del sitio de manera responsiva. Asimismo, se implementa una página principal que muestra todos los datos iniciales necesarios para los usuarios que ingresen al sitio, así como una página de contacto para realizar contacto directo por medio de correo electrónico.",
+        "implementations_2": "Se implementa un menú de hamburguesa para una navegación adecuada del sitio en dispositivos con tamaños de pantalla menores a 1920 pixeles de ancho. Además, se adapta la sección de acerca de para una fácil lectura y composición.",
+        "implementations_image": "../../../assets/imgs/wlaraportfolio/wlaraportfolio_implementations.png",
+        "learning_1": "Angular:",
+        "learning_1_description": "Al ser un framework que se renderiza del lado del cliente se deben tomar consideraciones para que la información se visualice correctamente y en tiempo real.",
+        "learning_2": "JSON:",
+        "learning_2_description": "La carga de toda la información de los proyectos y las fotografías se cargan dinámicamente mediante archivos JSON, metodología sencilla por su estructura.",
+        "learning_3": "Host:",
+        "learning_3_description": "Para mantener un sitio web en la red debe almacenarse en un host, por lo que su búsqueda, ya sea gratuito o de pago, debe ser la más minuciosa posible para que cumpla con nuestros requerimientos."
     }
 ]
