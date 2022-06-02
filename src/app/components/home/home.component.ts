@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 import doneProject from 'src/assets/json/projects.json';
 import { Observable } from 'rxjs';
-import { LanguageServiceService } from 'src/app/services/language-service.service';
+import { LanguageServiceService, Project } from 'src/app/services/language-service.service';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
@@ -13,13 +13,16 @@ import { ProjectsService } from 'src/app/services/projects.service';
 export class HomeComponent implements OnInit {
 
   //VARIABLES 
-  Projects: any = doneProject;
+  Projects: Project[] = [];
 
   languagesJSON$: Observable<any>;
 
   //CONSTRUCTOR
   constructor(languageService:LanguageServiceService, private projectsService:ProjectsService) { 
     this.languagesJSON$ = languageService.languageObservable;
+    languageService.projectsLanguageObservable.subscribe(projects =>{
+      this.Projects = projects;
+    });
   }
 
   ngOnInit(): void {

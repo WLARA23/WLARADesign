@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { LanguageServiceService } from './services/language-service.service';
@@ -15,6 +16,8 @@ export class AppComponent implements OnInit {
 
   languagesJSON$: Observable<any>;
   language:string = "Español";
+  urlsplit:string[] = [];
+  newURL = "";
 
   home:boolean = true;
   skills:boolean = false;
@@ -28,7 +31,7 @@ export class AppComponent implements OnInit {
   screen:number = 0;
 
   //CONSTRUCTOE
-  constructor(private languageService:LanguageServiceService){
+  constructor(private languageService:LanguageServiceService, public activatedRoute:ActivatedRoute, public router:Router){
     this.languagesJSON$ = languageService.languageObservable;
   }
 
@@ -130,18 +133,37 @@ export class AppComponent implements OnInit {
     if(languageElement?.textContent == "Español"){
       this.language = "English";
       languageElement.innerHTML = this.language;
+      this.languageService.LanguageURLData = "en";
     }else if(languageElement?.textContent == "English"){
       this.language = "Español";
       languageElement.innerHTML = this.language;
+      this.languageService.LanguageURLData = "es";
     }
     if(languageMobileElement?.textContent == "Español"){
       this.language = "English";
       languageMobileElement.innerHTML = this.language;
+      this.languageService.LanguageURLData = "en";
     }else if(languageMobileElement?.textContent == "English"){
       this.language = "Español";
       languageMobileElement.innerHTML = this.language;
+      this.languageService.LanguageURLData = "es";
     }
+    //console.log(this.languageService.languageURLObservable);
+
+    /*
+    console.log(this.router.url);
+    this.urlsplit = this.router.url.split('/');
+    this.urlsplit[1] = "en/";
+    this.newURL = "";
+    console.log(this.urlsplit);
+    for(let i = 0; i < this.urlsplit.length; i++){
+      this.newURL += this.urlsplit[i];
+    }
+    this.router.navigate([this.newURL]);
+    */
+
     this.languageService.changeLanguage(this.language);
+    this.languageService.changeProjectsLanguage(this.language);
     this.languagesJSON$ = this.languageService.languageObservable;
   }
 }

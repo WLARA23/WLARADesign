@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageServiceService, URLLanguage } from 'src/app/services/language-service.service';
 
 @Component({
   selector: 'app-pagenotfound',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagenotfoundComponent implements OnInit {
 
-  constructor() { }
+  languageURL: URLLanguage[] = [];
+
+  constructor(languageService: LanguageServiceService) {    
+    languageService.languageURLObservable.subscribe(url =>{
+      this.languageURL = url;
+    });
+   }
 
   ngOnInit(): void {
   }
