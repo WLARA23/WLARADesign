@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 import doneProject from 'src/assets/json/projects.json';
 import { Observable } from 'rxjs';
-import { LanguageServiceService } from 'src/app/services/language-service.service';
+import { LanguageServiceService, Project } from 'src/app/services/language-service.service';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
@@ -12,13 +12,19 @@ import { ProjectsService } from 'src/app/services/projects.service';
 })
 export class PortfolioComponent implements OnInit {
 
-  //VARIABLES 
-  Projects: any = this.getReverseProjects();
+  //VARIABLES
+  arrProjects: Project[] = [];
+  Projects: Project[] = [];
+
   languagesJSON$: Observable<any>;
 
   //CONSTRUCTOR
   constructor(languageService:LanguageServiceService, private projectsService:ProjectsService) { 
     this.languagesJSON$ = languageService.languageObservable;
+    languageService.projectsLanguageObservable.subscribe(projects =>{
+      this.arrProjects = projects;
+      this.Projects = this.getReverseProjects();
+    });
   }
 
   ngOnInit(): void {
@@ -26,8 +32,8 @@ export class PortfolioComponent implements OnInit {
 
   getReverseProjects(): any{
     let pivot = [];
-    for (let i = doneProject.length - 1; i >= 0; i--) {
-      pivot.push(doneProject[i]);
+    for (let i = this.arrProjects.length - 1; i >= 0; i--) {
+      pivot.push(this.arrProjects[i]);
     }
     return pivot;
   }

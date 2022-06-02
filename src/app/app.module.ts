@@ -13,6 +13,15 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SuccessComponent } from './components/success/success.component';
+import { LanguageServiceService, URLLanguage } from './services/language-service.service';
+
+
+let languageURL: URLLanguage[] = [];
+let languageService: LanguageServiceService = new LanguageServiceService;
+
+languageService.languageURLObservable.subscribe(url =>{
+  languageURL = url;
+});
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
