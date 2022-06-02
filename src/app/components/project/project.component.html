@@ -7,6 +7,8 @@
     <div class="col">
         <h3>{{(languagesJSON$ | async)?.about_project}}</h3>
         <p>{{Projects[id].about}}</p>
+        <h3>{{(languagesJSON$ | async)?.technologies_project}}</h3>
+        <p>{{Projects[id].technologies}}</p>
     </div>    
 </div>
 <!-- PROJECT GENERAL INFO -->
@@ -152,9 +154,9 @@
 </div>
 <!-- WHAT DID I LEARN? -->
 
-<div class="row project other-projects">
+<div class="row project other-Projects">
     <div class="col-12">
-        <h2>{{(languagesJSON$ | async)?.other_projects}}</h2>   
+        <h2>{{(languagesJSON$ | async)?.other_Projects}}</h2>   
             <!--CARD-->
             <div routerLink="/project/{{newProject.date}}/{{newProject.id}}" *ngFor="let newProject of Projects.slice(0,3)" class="project-card" (click)="setProjectId(newProject.id)">
                 <div class="project-card-img">
