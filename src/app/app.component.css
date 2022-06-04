@@ -162,18 +162,7 @@ input:checked[type="checkbox"] ~ .darkbtn{
     display: block;
     transition: .3s;
 }
-
-/*************************MEDIA QUERIES MOBILE*************************/
-@media only screen and (max-width: 576px) {
-    
-}
-/*************************MEDIA QUERIES TABLET*************************/
-@media only screen and (min-width:576.1px) and (max-width: 992px) {
-    
-}
 /****NAV****/
-
-
 /****FOOTER****/
 footer{
     background: var(--base-blue);
