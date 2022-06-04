@@ -130,21 +130,21 @@ export class AppComponent implements OnInit {
   changeLanguage():void{
     let languageElement = document.getElementById("language");
     let languageMobileElement = document.getElementById("languageMobile");
-    if(languageElement?.textContent == "Español"){
-      this.language = "English";
+    if(languageElement?.textContent == "ES"){
+      this.language = "EN";
       languageElement.innerHTML = this.language;
       this.languageService.LanguageURLData = "en";
-    }else if(languageElement?.textContent == "English"){
-      this.language = "Español";
+    }else if(languageElement?.textContent == "EN"){
+      this.language = "ES";
       languageElement.innerHTML = this.language;
       this.languageService.LanguageURLData = "es";
     }
-    if(languageMobileElement?.textContent == "Español"){
-      this.language = "English";
+    if(languageMobileElement?.textContent == "ES"){
+      this.language = "EN";
       languageMobileElement.innerHTML = this.language;
       this.languageService.LanguageURLData = "en";
-    }else if(languageMobileElement?.textContent == "English"){
-      this.language = "Español";
+    }else if(languageMobileElement?.textContent == "EN"){
+      this.language = "ES";
       languageMobileElement.innerHTML = this.language;
       this.languageService.LanguageURLData = "es";
     }
@@ -165,5 +165,6 @@ export class AppComponent implements OnInit {
     this.languageService.changeLanguage(this.language);
     this.languageService.changeProjectsLanguage(this.language);
     this.languagesJSON$ = this.languageService.languageObservable;
+    this.menu = false;
   }
 }
