@@ -50,7 +50,7 @@ p{
     margin-bottom: 1em;
 }
 .wdil .row p{
-    color: var(--base-blue);
+    color: var(--wdil-p);
 }
 
 /*************************MEDIA QUERIES MOBILE*************************/

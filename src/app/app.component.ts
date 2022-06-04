@@ -30,7 +30,9 @@ export class AppComponent implements OnInit {
 
   screen:number = 0;
 
-  //CONSTRUCTOE
+  darkMode:boolean = false;
+
+  //CONSTRUCTOR
   constructor(private languageService:LanguageServiceService, public activatedRoute:ActivatedRoute, public router:Router){
     this.languagesJSON$ = languageService.languageObservable;
   }
@@ -148,23 +150,34 @@ export class AppComponent implements OnInit {
       languageMobileElement.innerHTML = this.language;
       this.languageService.LanguageURLData = "es";
     }
-    //console.log(this.languageService.languageURLObservable);
-
-    /*
-    console.log(this.router.url);
-    this.urlsplit = this.router.url.split('/');
-    this.urlsplit[1] = "en/";
-    this.newURL = "";
-    console.log(this.urlsplit);
-    for(let i = 0; i < this.urlsplit.length; i++){
-      this.newURL += this.urlsplit[i];
-    }
-    this.router.navigate([this.newURL]);
-    */
-
     this.languageService.changeLanguage(this.language);
     this.languageService.changeProjectsLanguage(this.language);
     this.languagesJSON$ = this.languageService.languageObservable;
     this.menu = false;
   }
+
+  darkModeChange():void{
+    if(this.darkMode){
+      //LIGHT MODE
+      document.documentElement.style.setProperty('--black', '#000000');
+      document.documentElement.style.setProperty('--white', '#ffffff');
+      document.documentElement.style.setProperty('--input-blue', '#DDDBF4');
+      document.documentElement.style.setProperty('--light-blue', '#CFCCEF');
+      document.documentElement.style.setProperty('--border-blue', '#A19CD2');
+      document.documentElement.style.setProperty('--base-blue', '#120B67');
+      document.documentElement.style.setProperty('--wdil-p', '#000000');
+      this.darkMode = false;
+    }else{
+      //DARK MODE
+      document.documentElement.style.setProperty('--black', '#ffffff');
+      document.documentElement.style.setProperty('--white', '#000000');
+      document.documentElement.style.setProperty('--input-blue', '#A19CD2');
+      document.documentElement.style.setProperty('--light-blue', '#3E4C64');
+      document.documentElement.style.setProperty('--border-blue', '#323E55');
+      document.documentElement.style.setProperty('--base-blue', '#1F293E');
+      document.documentElement.style.setProperty('--wdil-p', '#ffffff');
+      this.darkMode = true;
+    }
+  }
+
 }
