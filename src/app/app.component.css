@@ -163,23 +163,6 @@ input:checked[type="checkbox"] ~ .darkbtn{
     transition: .3s;
 }
 /****NAV****/
-/****FOOTER****/
-footer{
-    background: var(--base-blue);
-    color: white;
-    padding: 3em .5em;
-}
-footer p{
-    margin: auto 0;
-}
-footer a{
-    text-decoration: none;
-    color: white;
-}
-footer a:hover{
-    color: var(--light-gold);
-}
-/****FOOTER****/
 
 /*************************MEDIA QUERIES MOBILE*************************/
 @media only screen and (max-width: 576px) {
@@ -246,12 +229,6 @@ footer a:hover{
     .instagram{
         display: none;
     }
-    footer{
-        padding: 1.5em .5em;
-    }
-    footer p{
-        font-size: .7em;
-    }
 }
 /*************************MEDIA QUERIES TABLET*************************/
 @media only screen and (min-width:576.1px) and (max-width: 992px) {
@@ -317,11 +294,5 @@ footer a:hover{
     }
     .instagram{
         display: none;
-    }
-    footer{
-        padding: 1.5em .5em;
-    }
-    footer p{
-        font-size: .7em;
     }
 }
