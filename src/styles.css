@@ -14,7 +14,7 @@ body{
     background-color: var(--light-blue);
     font-family: 'Roboto';
     font-weight: 300;
-    color: black;
+    color: var(--black);
 }
 
 ::-webkit-scrollbar{

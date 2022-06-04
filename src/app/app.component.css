@@ -34,6 +34,9 @@
     width: fit-content;
     display: inline-block;
 }
+.logo:hover{
+    cursor: pointer;
+}
 .social-networks{
     height: 2em;
     margin: .5em 0 .5em 1em;
