@@ -63,7 +63,7 @@ input[type="checkbox"]{
     cursor: pointer;
 }
 input[type="checkbox"]::before{
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     content: "";
     top: 3.3px;
@@ -152,7 +152,7 @@ footer p{
 /*************************MEDIA QUERIES MOBILE*************************/
 @media only screen and (max-width: 576px) {
     .nav ul{
-        z-index: 1;
+        z-index: 2;
         padding: 6em 7em 70vh 1em;
         position: absolute;
         top: 0;
