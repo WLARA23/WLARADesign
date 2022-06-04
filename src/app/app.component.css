@@ -6,6 +6,7 @@
     display: inline-block;
     width: fit-content;
     margin: auto;
+    padding-left: 6em;
 }
 .nav ul li{
     display: inline-block;
@@ -19,13 +20,6 @@
     cursor: pointer;
     transition: .5s;
 }
-#language{
-    background: var(--base-blue) !important;
-    color: var(--white);
-}
-#language:hover{
-    background: var(--black) !important;
-}
 .menu{
     display: none;
 }
@@ -33,6 +27,9 @@
     height: 3em;
     width: fit-content;
     display: inline-block;
+}
+.logo:hover{
+    cursor: pointer;
 }
 .social-networks{
     height: 2em;
@@ -50,6 +47,86 @@
     padding: 0;
     margin: 0;
 }
+
+/* LANGUAGE SWITCH */
+input[type="checkbox"]{
+    top: .6em;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: var(--border-blue);
+    -webkit-appearance: none;
+    border-radius: 20px;
+    outline: none;
+    transition: .4s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+input[type="checkbox"]::before{
+    z-index: 2;
+    position: absolute;
+    content: "";
+    top: 3.3px;
+    left: 3.5px;
+    width: 23px;
+    height: 23px;
+    background: url(../assets/imgs/ES.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+input:checked[type="checkbox"]::before{
+    left: 33.5px;
+    background: url(../assets/imgs/EN.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#switch{
+    padding: 0;
+    position: relative !important;
+    display: inline-block !important;
+    border-radius: 0 !important;
+    background: none !important;
+}
+#switch:hover{
+    background: none !important;
+    cursor: none !important;
+    transition: 0 !important;
+}
+.enbtn{
+    position: absolute;
+    color: var(--border-blue);
+    font-weight: 600;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0s;
+
+    top: .8em;
+    left: 6px;
+}
+.esbtn{
+    position: absolute;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .3s;
+
+    top: .8em;
+    right: 6px;
+}
+input:checked[type="checkbox"] ~ .esbtn{
+    color: var(--border-blue);
+    transition: 0s;
+}
+input:checked[type="checkbox"] ~ .enbtn{
+    color: var(--white);
+    transition: .3s;
+}
+
 /*************************MEDIA QUERIES MOBILE*************************/
 @media only screen and (max-width: 576px) {
     

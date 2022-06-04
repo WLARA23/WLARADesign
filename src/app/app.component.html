@@ -4,7 +4,7 @@
     <img class="menu" (click)="openMenu()" src="../assets/imgs/svg/icon_menu.svg" alt="Menu">
   </span>  
   <span class="icons-nav">
-    <img class="logo" src="../assets/imgs/svg/WLARA_Compact_Logo_White.svg" alt="Logo">
+    <img routerLink="/home" (click)="openHome()" class="logo" src="../assets/imgs/svg/WLARA_Compact_Logo_White.svg" alt="Logo">
   </span>
 
   <!-- UL DESKTOP -->
@@ -14,7 +14,12 @@
     <li routerLink="/portfolio" (click)="openPortfolio()" [ngStyle]="{background: portfolio ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.portfolio}}</li>
     <li routerLink="/about" (click)="openAbout()" [ngStyle]="{background: about ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.about}}</li>
     <li routerLink="/contact" (click)="openContact()" [ngStyle]="{background: contact ? '#ffffff' : 'none'}">{{(languagesJSON$ | async)?.contact}}</li>
-    <li (click)="changeLanguage()" id="language">{{(languagesJSON$ | async)?.name}}</li>
+    <!--<li id="switch">
+      <input type="checkbox" (click)="changeLanguage()" checked>
+      <label for="" id="language"  class="enbtn">{{(languagesJSON$ | async)?.name}}</label>
+      <label for="" class="esbtn">{{(languagesJSON$ | async)?.name}}</label>
+    </li>-->
+    
   </ul>
   <!-- UL DESKTOP -->
 
@@ -56,7 +61,6 @@
         
         {{(languagesJSON$ | async)?.contact}}
     </li>
-    <li (click)="changeLanguage()" id="languageMobile">{{(languagesJSON$ | async)?.name}}</li>
   </ul>
   <!-- UL MOBILE -->
   
@@ -67,8 +71,11 @@
     <a href="https://www.linkedin.com/in/willylaracampos/" target="_blank">
       <img class="social-networks align-center" src="../assets/imgs/svg/linkedin.svg" alt="Logo">
     </a>
-    
-    
+    <li id="switch">
+      <input type="checkbox" (click)="changeLanguage()" checked>
+      <label for="" id="language"  class="enbtn">{{(languagesJSON$ | async)?.name}}</label>
+      <label for="" class="esbtn">{{(languagesJSON$ | async)?.name}}</label>
+    </li>    
   </span>
   
 </nav>

@@ -48,10 +48,10 @@ export class LanguageServiceService {
   enJSON = EN;
   proyectosJSON = proyectos;
   projectsJSON = projects;
-  languageJSON: any = this.esJSON;
+  languageJSON: any = this.enJSON;
   projectslanguageJSON: any = this.proyectosJSON;
 
-  url: any = "es";
+  url: any = "en";
 
   private languageURLObservablePrivate: BehaviorSubject<any> = new BehaviorSubject<any>(this.url);
 
