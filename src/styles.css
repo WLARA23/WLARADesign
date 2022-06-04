@@ -9,6 +9,7 @@
     --light-gold: #F0D84A;
     --input-gold: #FFF2A7;
     --light-gray: #d3d3d3;
+    --wdil-p: #000000;
 }
 body{
     background-color: var(--light-blue);
@@ -41,6 +42,7 @@ body{
     padding: .5em 10em;
     font-size: 1.5em;
     border-radius: .7em;
+    color: black;
 }
 .btn-see-more:hover{
     cursor: pointer;
@@ -88,6 +90,7 @@ body{
     padding: 0 .6em !important;
     height: auto !important;
     background-color: var(--input-blue);
+    color: black;
 }
 .project-card:hover{
     border: .1em solid var(--base-blue);
@@ -95,10 +98,10 @@ body{
 }
 .project-card:hover .project-card-info{
     background: var(--base-blue);
-    color: var(--white);
+    color: white;
 }
 .project-card:hover .project-card-info h3{
-    color: var(--white);
+    color: white;
 }
 .project-card-info h3{
     display: inline-block;

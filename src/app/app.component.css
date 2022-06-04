@@ -6,7 +6,7 @@
     display: inline-block;
     width: fit-content;
     margin: auto;
-    padding-left: 6em;
+    padding-left: 10em;
 }
 .nav ul li{
     display: inline-block;
@@ -86,6 +86,7 @@ input:checked[type="checkbox"]::before{
 }
 #switch{
     padding: 0;
+    margin-left: .5em;
     position: relative !important;
     display: inline-block !important;
     border-radius: 0 !important;
@@ -109,7 +110,7 @@ input:checked[type="checkbox"]::before{
 }
 .esbtn{
     position: absolute;
-    color: var(--white);
+    color: white;
     font-weight: 600;
     font-size: 1em;
     pointer-events: none;
@@ -123,7 +124,42 @@ input:checked[type="checkbox"] ~ .esbtn{
     transition: 0s;
 }
 input:checked[type="checkbox"] ~ .enbtn{
-    color: var(--white);
+    color: white;
+    transition: .3s;
+}
+
+/*DARK MODE*/
+#darkModeSwitch::before{
+    background: white;
+}
+.darkbtn{
+    position: absolute;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0s;
+    width: 30%;
+    display: none;
+
+    top: .9em;
+    left: 8px;
+}
+.lightbtn{
+    position: absolute;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .3s;
+    width: 30%;
+    display: block;
+
+    top: .9em;
+    right: 8px;
+}
+input:checked[type="checkbox"] ~ .lightbtn{
+    display: none;
+    transition: 0s;
+}
+input:checked[type="checkbox"] ~ .darkbtn{
+    display: block;
     transition: .3s;
 }
 
@@ -141,11 +177,18 @@ input:checked[type="checkbox"] ~ .enbtn{
 /****FOOTER****/
 footer{
     background: var(--base-blue);
-    color: var(--white);
+    color: white;
     padding: 3em .5em;
 }
 footer p{
     margin: auto 0;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    color: var(--light-gold);
 }
 /****FOOTER****/
 
