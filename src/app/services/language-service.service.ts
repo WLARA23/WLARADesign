@@ -49,7 +49,7 @@ export class LanguageServiceService {
   proyectosJSON = proyectos;
   projectsJSON = projects;
   languageJSON: any = this.enJSON;
-  projectslanguageJSON: any = this.proyectosJSON;
+  projectslanguageJSON: any = this.projectsJSON;
 
   url: any = "en";
 

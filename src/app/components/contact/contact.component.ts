@@ -40,35 +40,89 @@ export class ContactComponent implements OnInit {
       return;
     }
 
-    const data = {
-      email: this.email,
-      fullname: this.fullname,
-      subject: this.subject,
-      message: this.message
-    };
-
-    const entry = {
-      ...data,
-    } as Feedback;
-
-    this.formStatusSub = this.netlifyForms.submitFeedback(entry).subscribe(
-      (res) => {
-        this.loading = false;
-        this.emailSent = true;
-        setTimeout(() => {
-          this.emailSent = false;
-        }, 10000);
-        contactForm.resetForm();
-        this.router.navigate(['success']);
-      },
-      (err) => {
-        this.loading = false;
-        this.emailFailed = true;
-        setTimeout(() => {
-          this.emailFailed = false;
-        }, 10000);
+    if(this.email != "" && this.fullname != "" && this.subject != "" && this.message != ""){
+      const data = {
+        email: this.email,
+        fullname: this.fullname,
+        subject: this.subject,
+        message: this.message
+      };
+  
+      const entry = {
+        ...data,
+      } as Feedback;
+  
+      this.formStatusSub = this.netlifyForms.submitFeedback(entry).subscribe(
+        (res) => {
+          this.loading = false;
+          this.emailSent = true;
+          setTimeout(() => {
+            this.emailSent = false;
+          }, 10000);
+          contactForm.resetForm();
+          this.router.navigate(['success']);
+        },
+        (err) => {
+          this.loading = false;
+          this.emailFailed = true;
+          setTimeout(() => {
+            this.emailFailed = false;
+          }, 10000);
+        }
+      );
+    }else{
+      if(this.email == ""){
+        let elementError = document.getElementById("email");
+        if(elementError != null){
+          elementError.style.border = ".1em solid red";
+        }        
+      }else{
+        let elementError = document.getElementById("email");
+        if(elementError != null){
+          elementError.style.border = ".1em solid var(--border-blue)";
+        }  
       }
-    );
+
+      if(this.fullname == ""){
+        let elementError = document.getElementById("fullname");
+        if(elementError != null){
+          elementError.style.border = ".1em solid red";
+        } 
+      }else{
+        let elementError = document.getElementById("fullname");
+        if(elementError != null){
+          elementError.style.border = ".1em solid var(--border-blue)";
+        }  
+      }
+
+      if(this.subject == ""){
+        let elementError = document.getElementById("subject");
+        if(elementError != null){
+          elementError.style.border = ".1em solid red";
+        } 
+      }else{
+        let elementError = document.getElementById("subject");
+        if(elementError != null){
+          elementError.style.border = ".1em solid var(--border-blue)";
+        }  
+      }
+
+      if(this.message == ""){
+        let elementError = document.getElementById("message");
+        if(elementError != null){
+          elementError.style.border = ".1em solid red";
+        } 
+      }else{
+        let elementError = document.getElementById("message");
+        if(elementError != null){
+          elementError.style.border = ".1em solid var(--border-blue)";
+        }  
+      }
+      let tagError = document.getElementById("errorMessage");
+      if(tagError != null){
+        tagError.innerHTML = 'Fill in all the fields';
+      }
+    }    
   }
 
   ngOnDestroy() {
